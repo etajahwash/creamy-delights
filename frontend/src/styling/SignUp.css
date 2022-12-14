@@ -1,0 +1,112 @@
+.signUpContainer {
+    height: 100vh;
+}
+
+/* .signUpWrap {
+    padding-top: 5.3rem;
+    margin-left: 31.5rem;
+} */
+
+.signUpSection {
+    width: 31rem;
+    height: 30rem;
+    background-color: rgba(255, 255, 255, 0.272);
+    border-radius: 20px;
+    padding-top: 4rem;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+form {
+    margin-left: 0rem;
+    text-align: center;
+    margin-top: -3rem;
+}
+
+.suHr {
+    width: 20rem;
+    margin-left: 5.5rem;
+    margin-bottom: 2rem;
+}
+
+form > div > label {
+    display: block;
+    margin-right: 0.8rem;
+}
+
+form > div > input {
+    border-radius: 30px;
+    border-style: none;
+    text-indent: 10px;
+    width: 13rem;
+    height: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.suSubmitButton {
+    border-style: none;
+    background-color: palevioletred;
+    width: 6rem;
+    height: 2.1rem;
+    animation: submit 3s infinite;
+}
+
+.suSubmitButton:hover {
+    transform: scale(1.1);
+}
+
+@keyframes submit {
+    0% { color: #60f09e; }
+    50% { color: #4bb2de; }
+    100% { color: #60f09e; }
+  }
+
+  .suBack {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+  }
+
+  .suBack:hover {
+    color: #60f09e !important;
+  }
+
+  .suBackText {
+    margin-top: 0.5rem;
+    font-size: 15px;
+  }
+
+  .authUserExist {
+    margin-top: 0.8rem;
+    color: red;
+    background-color: rgba(255, 255, 255, 0.628);
+    font-weight: 800;
+    width: fit-content;
+    margin-left: 11.2rem;
+    border-radius: 5px;
+  }
+
+
+
+
+
+
+  /* MEDIA QUERIES */
+
+  @media screen and (max-width: 1700px) {
+    .authUserExist {
+        margin-right: 8rem;
+        margin-left: 9rem;
+    }
+  }
+
+  @media screen and (max-width: 482px) {
+        .suBack {
+            margin-left: 8rem;
+        }
+  }

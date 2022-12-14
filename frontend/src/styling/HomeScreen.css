@@ -1,0 +1,252 @@
+.homeScreenContainer {
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    /* overflow-y: auto; */
+}
+
+.firstHalf {
+    background-color: #95cdde;
+    height: 100vh;
+}
+
+.leftText {
+    text-align: center;
+    margin-left: -3rem;
+    height: 100vh;
+}
+
+.tasty {
+    margin-top: 15%;
+    font-weight: 600;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 35px;
+    line-height: 3.5rem;
+    color: #FAB65C;
+}
+
+.button {
+    border-radius:20px;
+    width: 8rem;
+    height: 2rem;
+    animation: 3s button infinite;
+    background-color: #79e881;
+    border: none;
+}
+
+.button:hover {
+    transform: scale(1.4);
+}
+
+@keyframes button {
+    0% { color: purple; background-color: #79e881; }
+    50% { color: #ef91c8; background-color: #E8E479; }
+    100% { color: purple; background-color: #79e881; }
+  }
+
+@keyframes bg {
+    0% {  }
+    50% { }
+    100% {  }
+  }
+
+.minis {
+    background-color: #C8BFE7;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.miniOne, .miniTwo, .miniThree {
+    height: 6rem;
+    width: 12rem;
+    border: none rgb(215, 11, 184);
+    border-radius: 10px;
+    border-style: dotted;
+    background-color: rgb(247, 168, 194);
+    left: 50%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+.miniOne {
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
+    rotate: -15deg;
+    margin-left: -1.5rem;
+    display: flex;
+}
+
+.miniTwo {
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    margin-right: 1rem;
+    rotate: 10deg;
+    display: flex;
+}
+
+.miniThree {
+    margin-right: 7rem;
+    rotate: 4deg;
+    margin-top: 3rem;
+    display: flex;
+}
+
+.wavie {
+    height: 27rem;
+    width: 18rem;
+    margin-left: 3rem;
+    margin-top: 7rem;
+    animation: wavie 3s infinite;
+}
+
+@keyframes wavie {
+    0% { rotate: -20deg; }
+    50% { rotate: 20deg; }
+    100% { rotate: -20deg; }
+}
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 767px) {
+   .wavie{
+    height: 10rem
+    }
+
+    .homeScreenContainer {
+        display: grid;
+        width: 115vw;
+        /* overflow-y: visible; */
+    }
+    .minis {
+        display: none;
+    }
+
+}
+ 
+@media screen and (max-width: 500px) and (min-height: 750px) and (max-height: 1000px) {
+
+    .leftText {
+        margin-top: 10.5rem;
+        padding-right: 0.7rem;
+    }
+
+    .button {
+        width: 10.5rem;
+        height: 3.5rem;
+        border-radius: 30px;
+        margin-top: 2rem;
+    }
+}
+ 
+@media screen and (max-width: 500px) and (min-height: 671px) and (max-height: 749px) {
+
+    .leftText {
+        margin-top: 7.5rem;
+
+    }
+
+    .tasty {
+        font-size: 50px;
+    }
+
+    .button {
+        width: 10.5rem;
+        height: 3.5rem;
+        border-radius: 30px;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 530px) and (max-height: 705px) {
+
+    .leftText {
+        margin-top: 7.5rem;
+        margin-right: 2rem;
+    }
+
+    .tasty {
+        font-size: 30px;
+    }
+
+    .button {
+        width: 10.5rem;
+        height: 3.5rem;
+        border-radius: 30px;
+        margin-top: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 415px) and (min-height: 730px) and (max-height: 748px) {
+
+    .leftText {
+        margin-top: 7.5rem;
+        margin-right: 0.2rem;
+    }
+
+    .tasty {
+        font-size: 30px;
+    }
+
+    .button {
+        width: 10.5rem;
+        height: 3.5rem;
+        border-radius: 30px;
+        margin-top: 2rem;
+    }
+
+}
+
+
+@media screen and (max-width: 500px) and (max-height: 670px) {
+
+    .leftText {
+        margin-top: 7rem;
+        margin-right: 1rem;
+    }
+
+    .button {
+        width: 9rem;
+        height: 3rem;
+        border-radius: 30px;
+    }
+
+    .tasty {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 359px) and (max-height: 670px) {
+
+    .leftText {
+        margin-top: 4rem;
+        margin-right: 0rem;
+    }
+
+    .button {
+        width: 9rem;
+        height: 3rem;
+        border-radius: 30px;
+    }
+
+    .tasty {
+        font-size: 22px;
+        margin-bottom: 5rem;
+    }
+}

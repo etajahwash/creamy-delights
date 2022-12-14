@@ -1,0 +1,460 @@
+.updateSection {
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* .updateLeft, .updateRight {
+    border: black solid;
+} */
+
+.updateWrapper {
+    height: 90vh;
+    overflow-y: auto;
+}
+
+.updateFlex {
+    display: flex;
+}
+
+.updateEmoji {
+    font-size: 39px;
+    padding-right: 0.5rem;
+}
+
+.updateTitle {
+    margin-left: 22.5rem;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    color: #66E5F3;
+    margin-bottom: -5rem;
+}
+
+.updateImgContainerSection {
+    height: 100vh;
+}
+
+.updateImgContainer {
+    position: relative;
+    height: 100%;
+    width: 50rem;
+}
+
+.updateBackContainer {
+    position: absolute;
+    display: flex;
+    margin-left: 1rem;
+    margin-top: 38.8rem;
+}
+
+.updateBack {
+    font-size: 15px;
+    margin-top: 0.05rem;
+}
+
+.updateForm {
+    justify-content: center;
+    margin-top: 7rem;
+}
+
+.updateCreationSection {
+    width: 40rem;
+    height: 25rem;
+    background-color: rgba(241, 163, 241, 0.694);
+    margin-left: 2.3rem;
+    display: flex;
+    border-radius: 20px;
+}
+
+.updateNameSection {
+    margin-bottom: 0rem;
+}
+
+.updateNameLabel {
+    margin-bottom: -1rem;
+    font-size: 25px;
+    width: 18rem;
+    padding-left: 1.5rem;
+    margin-top: 5rem;
+}
+
+.updateNameInput {
+    margin-left: 3.9rem;
+    margin-top: 0.5rem;
+    margin-bottom: 5.5rem;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    animation: 3s updateColor infinite;
+}
+
+@keyframes updateColor {
+    0% { color: #F060D3; }
+    25% { color: #FAB65C; }
+    50% { color: #79e881; }
+    75% { color: #554BDE; }
+    100% { color: #F060D3; }
+}
+
+/* .updateFlavor {
+    border: solid black;
+} */
+
+.updateBaseFlavorName {
+    font-size: 20px;
+}
+
+.baseFlavorSelect {
+    border-radius: 13px;
+    width: 7rem;
+    text-align: center;
+    animation: 3s updateColor infinite;
+}
+
+.updateToppings {
+    overflow: hidden;
+}
+
+.toppingsTitle {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.toppingsContainer {
+    height: 19.2rem;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.386);
+    margin: 0rem 0.9rem;
+    border-radius: 20px;
+    /* -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; */
+}
+
+.toppingsContainer > label {
+    margin-top: 2.3rem;
+}
+
+.theHidden {
+    display: none;
+}
+
+.updateSubmitButton {
+    margin-top: 3rem;
+    background-color: #d6ecd7;
+    border-radius: 20px;
+    border: none;
+    padding: 0.3rem 2rem;
+    animation: 1s submitButton infinite;
+}
+
+.updateSubmitButton:hover {
+    transform: scale(1.08);
+}
+
+@keyframes submitButton {
+    0% {color: plum;}
+    50% {color: rgb(119, 119, 235);}
+    100% {color: plum;}
+}
+
+.dontShowPrice {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1376px) {
+    .updateImgContainer {
+        width: 50rem;
+        height: 50rem;
+        margin-left: -7rem;
+        margin-top: -5rem;    
+    }
+
+    .updateBackContainer {
+        margin-left: 7.5rem;
+        margin-top: 42rem;
+    }
+
+    .updateCreationSection {
+        margin-left: -2rem;
+    }
+
+    .updateSubmitButton {
+        margin-left: -5rem;
+    }
+    
+}
+
+@media screen and (max-width: 1234px) {
+    .updateImgContainer {
+        display: none;  
+    }
+
+    .updateBackContainer {
+        margin-left: 7.5rem;
+        margin-top: 42rem;
+    }
+
+    .updateTitle {
+        margin-left: 16rem;
+    }
+
+    .updateCreationSection {
+        margin-left: -20rem;
+    }
+
+    .updateSubmitButton {
+        margin-left: -39rem;
+    }
+    
+}
+
+@media screen and (max-width: 1125px) {
+
+    .updateTitle {
+        margin-left: 16rem;
+    }
+
+    .updateCreationSection {
+        margin-left: -15rem;
+    }
+
+    .updateSubmitButton {
+        margin-left: -24rem;
+    }
+    
+}
+
+@media screen and (max-width: 983px) {
+
+    .updateTitle {
+        margin-left: 8rem;
+    }
+
+    .updateCreationSection {
+        margin-left: -19rem;
+    }
+
+    .updateSubmitButton {
+        margin-left: -24rem;
+    }
+    
+}
+
+@media screen and (max-width: 859px) {
+
+    .updateTitle {
+        margin-left: 8.5rem;
+        font-size: 40px;
+    }
+
+    .updateCreationSection {
+        margin-left: -19rem;
+    }
+
+    .updateSubmitButton {
+        margin-left: -24rem;
+    }
+    
+}
+
+@media screen and (max-width: 714px) {
+
+    .updateTitle {
+        margin-left: 6.5rem;
+        font-size: 32px;
+    }
+
+    .updateCreationSection {
+        margin-left: -19rem;
+    }
+
+    .updateSubmitButton {
+        margin-left: -24rem;
+    }
+    
+}
+
+@media screen and (max-width: 675px) {
+    .updateSection {
+        overflow-y: scroll;
+    }
+
+    .updateTitle {
+        margin-left: 5.5rem;
+        font-size: 32px;
+    }
+
+    .updateCreationSection {
+        margin-left: -13.5rem;
+        display: grid;
+        width: 27rem;
+        height: 50rem;
+    }
+
+    .toppingsContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .updateToppings {
+        margin-left: 6.8rem;
+    }
+
+    .updateSubmitButton {
+        margin-left: -24rem;
+    }
+
+    .updateNameSection {
+        margin-left: 3.5rem;
+    }
+
+    .updateBaseFlavor {
+        margin-left: 9.8rem;
+    }
+
+    .updateBaseFlavorName {
+        width: 10rem;
+        text-align: left;
+    }
+
+    .updateSubmitButton {
+        margin-top: -1rem;
+        margin-left: -21rem;
+    }
+    
+}
+
+@media screen and (max-width: 545px) {
+    .updateSection {
+        overflow-y: scroll;
+    }
+
+    .updateTitle {
+        margin-left: 2.5rem;
+        font-size: 25px;
+    }
+
+    .updateCreationSection {
+        margin-left: -10rem;
+        /* padding-left: 0; */
+        padding-right: 5rem;
+        display: grid;
+        width: 22rem;
+        height: 50rem;
+    }
+
+    .toppingsContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .updateToppings {
+        margin-left: 5.8rem;
+    }
+
+    .updateNameSection {
+        margin-left: 1.2rem;
+    }
+
+    .updateBaseFlavor {
+        margin-left: 7rem;
+    }
+
+    .updateBaseFlavorName {
+        width: 10rem;
+    }
+
+    .updateSubmitButton {
+        margin-top: -1rem;
+        margin-left: -21rem;
+    }
+    
+}
+
+@media screen and (max-width: 493px) and (min-width: 400px) and (max-height: 930px) and (min-height: 700px) {
+    .updateSubmitButton {
+        margin-left: -12rem;
+    }
+}
+
+@media screen and (max-width: 396px) {
+    .updateSection {
+        overflow-y: scroll;
+    }
+
+    .updateTitle {
+        margin-left: 5.5rem;
+        font-size: 22px;
+        width: 14rem;
+        text-align: center;
+    }
+
+    .updateCreationSection {
+        margin-left: -12.5rem;
+        /* padding-left: 0; */
+        /* padding-right: 6rem; */
+        display: grid;
+        width: 25rem;
+        height: 50rem;
+        background-color: rgba(255, 255, 255, 0.445);
+    }
+
+    .toppingsContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .updateToppings {
+        margin-left: 7.7rem;
+    }
+
+    .updateNameSection {
+        margin-left: 3.2rem;
+    }
+
+    .updateBaseFlavor {
+        margin-left: 9.4rem;
+    }
+
+    .updateBaseFlavorName {
+        width: 10rem;
+    }
+
+    .updateSubmitButton {
+        margin-top: -1rem;
+        margin-left: -11rem;
+    }
+    
+}
+
+@media screen and (max-width: 299px) {
+
+    .updateTitle {
+        margin-left: 1.5rem;
+        font-size: 22px;
+        width: 14rem;
+        text-align: center;
+    }
+
+    .updateSubmitButton {
+        margin-top: -1rem;
+        margin-left: -7.5rem;
+    }
+    
+}

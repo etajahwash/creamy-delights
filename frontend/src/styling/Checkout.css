@@ -1,0 +1,869 @@
+.checkoutSection {
+    height: 100vh;
+    display: flex;
+    /* overflow-y: auto; */
+}
+
+/* .coLeft, .coRight {
+    border: solid black ;
+} */
+
+.coLeft {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.coHr {
+    /* height: 5rem; */
+    width: 40rem;
+    color: black;
+    margin-left: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.yourCart, .actualCart, .coEnd {
+    margin-left: 4rem;
+}
+
+.yourCart {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+.actualCart {
+    background-color: rgba(255, 255, 255, 0.574);
+    border-radius: 20px;
+    height: 30rem;
+    width: 55rem;
+    overflow: auto;
+}
+
+.actualCart::-webkit-scrollbar {
+    display: none;
+}
+
+.actualCartWrapper {
+height: 25rem;
+width: 42rem;
+margin-left: 3rem;
+}
+
+.coBigger {
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+
+}
+
+.addSection {
+    text-align: center;
+    justify-content: center;
+    margin-left: 1.9rem;
+}
+
+.coAddNumber {
+    font-size: 28px;
+    margin-top: 0rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    padding: 0rem 0.3rem;
+}
+
+.coAdd {
+    margin-top: -0.5rem;
+}
+
+.coRemove {
+    margin-top: -0.59rem;
+}
+
+.coAdd:hover, .coRemove:hover {
+    transform: scale(1.02);
+}
+
+.cartMiniTitle {
+    display: flex;
+    margin-bottom: 0rem;
+    margin-top: 2.5rem;
+}
+
+.cmt {
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+}
+
+.cartMiniItems {
+    display: flex;
+    text-align: center;
+    width: 35rem;
+    margin-left: 3.5rem;
+}
+
+.coItem {
+    /* display: flex; */
+    /* text-align: center; */
+    /* justify-content: center; */
+    margin-top: -1.5rem;
+}
+
+.coItemImg {
+    width: 5rem;
+    height: 5rem;
+    /* margin-right: 2.5rem; */
+    margin-left: 4.3rem;
+}
+
+.coItemTitle {
+    /* align-self: center; */
+    font-weight: 800;
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 0.6rem;
+    margin-left: -2rem;
+}
+
+.coPrice {
+    margin-right: 2.7rem;
+}
+
+.coEndSection {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.coEnd {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.coRemoveSection {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.coRemoveSection:hover {
+    color: palevioletred;
+}
+
+.coDeleteIcon {
+    margin-top: -0.7rem;
+}
+
+.coRemoveText {
+    margin-top: 0rem;
+    margin-right: 1rem;
+    font-size: 13.5px;
+}
+
+.coRemoveText:hover, .coDeleteIcon:hover {
+    cursor:pointer
+}
+
+.coArrowBack {
+    margin-top: 0.4rem;
+    /* color: #F060D3; */
+}
+
+.coMenuLink {
+    display: flex;
+    color: #F060D3 !important;
+    margin-top: -1rem;
+}
+
+.coMenuLink:hover {
+    color: lavender !important;
+}
+
+.coRemoveText {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    margin-top: -0.5rem;
+}
+
+.finalCoSection {
+    width: 23rem;
+    height: 30rem;
+    margin-left: 4.5rem;
+    margin-top: 6.5rem;
+    background-color: rgba(255, 255, 255, 0.574);
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.finalSummary {
+    padding-bottom: 2rem;
+    padding-top: 2.3rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+}
+
+.finalHr {
+    margin-top: -0.9rem;
+    width: 16rem;
+    margin-left: 3.6rem;
+}
+
+.coSubtotal, .coTax {
+    text-align: left;
+    margin-left: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+}
+
+.coFinalTotal {
+    margin-top: 9rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+}
+
+.coClearSection {
+    display: flex;
+    margin-right: 6.5rem;
+    margin-top: -2.3rem;
+    color: rgba(255, 0, 0, 0.745);
+    height: 1.4rem;
+    width: 6rem;
+    border: solid palevioletred ;
+    border-width: 0.05rem;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.coClearSection:hover {
+    color: red;
+    transform: scale(1.05);
+}
+
+.coClear {
+    font-size: 15px;
+}
+
+.cartEmptyContainer {
+align-self: center;
+text-align: center;
+margin-left: 39rem;
+margin-top: -5rem;
+}
+
+.coStartShoppingText {
+    font-size: 40px;
+    letter-spacing: 0.1rem;
+    text-decoration: underline;
+    color: palevioletred;
+}
+
+.coStartShoppingText:hover {
+    color: rgba(104, 133, 235, 0.632);
+}
+
+.payButton {
+    margin: 0;
+    margin-top: 1rem;
+    background-color: palevioletred;
+    border-radius: 10px;
+    border: none;
+    padding: 0.3rem 2.5rem;
+    animation: 3s coPay infinite;
+}
+
+.payButton:hover {
+    background-color: #66E5F3;
+    color: rgb(40, 66, 198);
+}
+
+@keyframes coPay {
+    0% { color: #11502b; }
+    50% { color: #FAB65C; }
+    100% { color: #11502b; }
+  }
+
+
+
+
+
+
+
+
+
+
+  /* MEDIA QUERIES */
+
+  @media screen and (max-width: 1335px) {
+        .actualCart {
+            width: 46rem;
+        }
+  }
+
+  @media screen and (max-width: 1287px) {
+        .coClearSection {
+            margin-right: 4rem;
+        }    
+  }
+
+  @media screen and (max-width: 1210px) {
+        .coClearSection {
+            margin-right: 1.5rem;
+        }    
+  }
+
+  @media screen and (max-width: 1120px) {
+        .coClearSection {
+            margin-right: -2rem;
+        }    
+  }
+
+  @media screen and (max-width: 1104px) {
+        .coClearSection {
+            margin-right: -3rem;
+        }
+        
+        .checkoutSection {
+            display: grid;
+            overflow-y: scroll;
+            padding-bottom: 5rem;
+        }
+
+        .coLeft {
+            margin-left:7rem;
+        }
+
+        .coRight {
+            margin-left: 29rem;
+            margin-top: -10rem;
+        }
+  }
+
+  @media screen and (max-width: 1035px) and (min-width: 990px) {
+    .coClearSection {
+        margin-right: -6rem;
+    }    
+}
+
+  @media screen and (max-width: 990px) {
+    .coClearSection {
+        margin-right: -18rem;
+    }    
+}
+
+  @media screen and (max-width: 922px) {
+        .coClearSection {
+            margin-right: -20rem;
+        }
+        
+        .checkoutSection {
+            display: grid;
+            overflow-y: scroll;
+            padding-bottom: 5rem;
+        }
+
+        .coLeft {
+            margin-left:2rem;
+        }
+
+        .coRight {
+            margin-left: 24rem;
+            margin-top: -10rem;
+        }
+  }
+
+  @media screen and (max-width: 842px) {
+        .coClearSection {
+            margin-right: -23rem;
+        }
+        
+        .checkoutSection {
+            display: grid;
+            overflow-y: scroll;
+            padding-bottom: 5rem;
+        }
+
+        .coLeft {
+            margin-left: -0.5rem;
+        }
+
+        .coRight {
+            margin-left: 22rem;
+            margin-top: -10rem;
+        }
+  }
+
+  @media screen and (max-width: 829px) {
+        .cartEmptyContainer {
+            margin-left: 0rem;
+        }
+  }
+
+  @media screen and (max-width: 800px) {
+        .coClearSection {
+            margin-right: -24.5rem;
+        }
+        
+        .checkoutSection {
+            display: grid;
+            overflow-y: scroll;
+            padding-bottom: 5rem;
+        }
+
+        .coLeft {
+            margin-left: -3.5rem;
+        }
+
+        .coRight {
+            margin-left: 19rem;
+            margin-top: -10rem;
+        }
+  }
+
+  @media screen and (max-width: 771px) {
+        .coClearSection {
+            margin-right: 10rem;
+        }
+        
+        .checkoutSection {
+            display: grid;
+            overflow-y: scroll;
+            padding-bottom: 5rem;
+        }
+
+        .coLeft {
+            margin-left: 4.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .yourCart {
+            margin-left: -5rem;
+        }
+
+        .actualCart {
+            width: 30rem;
+        }
+
+        .coHr {
+            margin-bottom: 5rem;
+            width: 20rem;
+        }
+
+        .cartPrice, .cartQuantity, .cartTotal {
+            display: none;
+        }
+
+        .cartItem {
+            margin-left: 2rem;
+        }
+
+        .coItem {
+            margin-bottom: -2rem
+        }
+
+        .coPrice {
+            margin-top: 0.5rem;
+            margin-left: -4rem;
+        }
+
+        .coQuantity {
+            margin-top: -2rem;
+            margin-left: -7.4rem;
+        }
+
+        .coTotal {
+            display: none;
+        }
+
+        .coRight {
+            margin-left: 8rem;
+            margin-top: -10rem;
+        }
+
+        .coMenuLink {
+            margin-top: -73rem;
+            margin-left: -8rem;
+        }
+  }
+
+  @media screen and (max-width: 717px) {
+    .coClearSection {
+        margin-right: 6.5rem;
+    }
+}
+
+  @media screen and (max-width: 650px) {
+    .coClearSection {
+        margin-right: 3.5rem;
+    }
+}
+
+  @media screen and (max-width: 628px) {
+        .coClearSection {
+            margin-right: 5rem;
+        }
+        
+        .checkoutSection {
+            display: grid;
+            overflow-y: scroll;
+            padding-bottom: 5rem;
+        }
+
+        .coLeft {
+            margin-left: 0.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .yourCart {
+            margin-left: -5rem;
+        }
+
+        .actualCart {
+            width: 30rem;
+        }
+
+        .coRight {
+            margin-left: 4rem;
+            margin-top: -10rem;
+        }
+
+        .coMenuLink {
+            margin-top: -73rem;
+            margin-left: -4rem;
+        }
+  }
+
+  @media screen and (max-width: 565px) {
+        .coClearSection {
+            margin-right: 3.5rem;
+        }
+        
+        .checkoutSection {
+            display: grid;
+            overflow-y: scroll;
+            padding-bottom: 5rem;
+        }
+
+        .coLeft {
+            margin-left: -2rem;
+            margin-bottom: 3rem;
+        }
+
+        .yourCart {
+            margin-left: -5rem;
+        }
+
+        .actualCart {
+            width: 30rem;
+        }
+
+        .coRight {
+            margin-left: 1.5rem;
+            margin-top: -10rem;
+        }
+
+        .coMenuLink {
+            margin-top: -73rem;
+            margin-left: -2rem;
+        }
+  }
+
+  @media screen and (min-width: 380px) and (max-width: 550px) and (max-height: 1000px) and (min-height: 730px) {
+    .coRight {
+        margin-left: 8.5rem;
+        margin-top: -10rem;
+    }
+}
+
+  @media screen and (max-width: 523px) {
+        .coClearSection {
+            margin-right: 3.5rem;
+        }
+        
+        .checkoutSection {
+            display: grid;
+            overflow-y: scroll;
+            padding-bottom: 5rem;
+        }
+
+        .coLeft {
+            margin-left: -4rem;
+            margin-bottom: 3rem;
+        }
+
+        .yourCart {
+            margin-left: -5rem;
+        }
+
+        .actualCart {
+            width: 30rem;
+        }
+
+        .coRight {
+            margin-left: -0.5rem;
+            margin-top: -10rem;
+        }
+
+        .coMenuLink {
+            margin-top: -73rem;
+            margin-left: 0rem;
+        }
+  }
+
+  @media screen and (max-width: 430px) {
+        .coClearSection {
+            margin-right: 20.5rem;
+            margin-left: -7rem;
+            /* padding-right: 5rem; */
+            width: 7rem;
+            height: 1.5rem;
+        }
+        
+        .checkoutSection {
+            display: grid;
+            overflow-y: scroll;
+            padding-bottom: 5rem;
+        }
+
+        .coLeft {
+            margin-left: -6rem;
+            margin-bottom: 3rem;
+        }
+
+        .yourCart {
+            margin-left: -15rem;
+        }
+
+        .actualCart {
+            width: 30rem;
+        }
+
+        .coRight {
+            margin-left: -2.5rem;
+            margin-top: -10rem;
+        }
+
+        .coMenuLink {
+            margin-top: -73rem;
+            margin-left: 2rem;
+            width: 25rem;
+        }
+
+        .coContinueShopping {
+            margin-top: 0.4rem;
+            font-size: 19px;
+        }
+  }
+
+  @media screen and (max-width: 408px) {
+        .coClearSection {
+            margin-right: 20.5rem;
+            margin-left: -16rem;
+            /* padding-right: 5rem; */
+            width: 7rem;
+            height: 1.5rem;
+        }
+        
+        .checkoutSection {
+            display: grid;
+            overflow-y: scroll;
+            padding-bottom: 5rem;
+        }
+
+        .coLeft {
+            margin-left: -7.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .yourCart {
+            margin-left: -15rem;
+        }
+
+        .actualCart {
+            width: 30rem;
+        }
+
+        .coRight {
+            margin-left: -3.5rem;
+            margin-top: -10rem;
+        }
+
+        .coMenuLink {
+            margin-top: -73rem;
+            margin-left: 3.5rem;
+            width: 25rem;
+        }
+  }
+
+  @media screen and (max-width: 377px) {
+        .coClearSection {
+            margin-right: 20.5rem;
+            margin-left: -18rem;
+            /* padding-right: 5rem; */
+            width: 7rem;
+            height: 1.5rem;
+        }
+        
+        .checkoutSection {
+            display: grid;
+            overflow-y: scroll;
+            padding-bottom: 5rem;
+        }
+
+        .coLeft {
+            margin-left: -9rem;
+            margin-bottom: 3rem;
+        }
+
+        .yourCart {
+            margin-left: -11rem;
+        }
+
+        .actualCart {
+            width: 30rem;
+        }
+
+        .coRight {
+            margin-left: -4.2rem;
+            margin-top: -10rem;
+        }
+
+        .coMenuLink {
+            margin-top: -73rem;
+            margin-left: 5.5rem;
+            width: 25rem;
+        }
+
+        .coContinueShopping {
+            margin-top: 0.4rem;
+            font-size: 19px;
+        }
+  }
+
+  @media screen and (max-width: 347px) {
+        .coClearSection {
+            margin-right: 20.5rem;
+            margin-left: -19rem;
+            /* padding-right: 5rem; */
+            width: 7rem;
+            height: 1.5rem;
+        }
+        
+        .checkoutSection {
+            display: grid;
+            overflow-y: scroll;
+            padding-bottom: 5rem;
+        }
+
+        .coLeft {
+            margin-left: -9rem;
+            margin-bottom: 3rem;
+        }
+
+        .yourCart {
+            margin-left: -11rem;
+        }
+
+        .actualCart {
+            width: 30rem;
+        }
+
+        .coHr {
+            width: 25rem;
+        }
+
+        .coItemTitle {
+            font-size: 20px;
+            width: 20rem;
+            margin-left: -2rem;
+        }
+
+        .coItemImg {
+            margin-left: 2rem;
+        }
+
+        .coPrice {
+            margin-left: -8rem;
+        }
+
+        .coRight {
+            margin-left: -4.8rem;
+            margin-top: -10rem;
+        }
+
+        .coMenuLink {
+            margin-top: -73rem;
+            margin-left: 5.5rem;
+            width: 25rem;
+        }
+  }
+
+  @media screen and (max-width: 309px) {
+        .coClearSection {
+            margin-right: 20.5rem;
+            margin-left: -19rem;
+            /* padding-right: 5rem; */
+            width: 7rem;
+            height: 1.5rem;
+        }
+        
+        .checkoutSection {
+            display: grid;
+            overflow-y: scroll;
+            padding-bottom: 5rem;
+        }
+
+        .coLeft {
+            margin-left: -9rem;
+            margin-bottom: 3rem;
+        }
+
+        .yourCart {
+            margin-left: -11rem;
+        }
+
+        .actualCart {
+            width: 30rem;
+        }
+
+        .coHr {
+            width: 25rem;
+        }
+
+        .coItemTitle {
+            font-size: 20px;
+        }
+
+        .coItemImg {
+            margin-left: 2rem;
+        }
+
+        .coPrice {
+            margin-left: -8rem;
+        }
+
+        .coRight {
+            margin-left: -5rem;
+            margin-top: -10rem;
+        }
+
+        .coMenuLink {
+            margin-top: -73rem;
+            margin-left: 5.5rem;
+            width: 25rem;
+        }
+
+        .coContinueShopping {
+            margin-top: 0.4rem;
+            font-size: 19px;
+        }
+  }
+
+  @media screen and (max-width: 292px) {
+        .coStartShoppingText {
+            font-size: 25px;
+        }
+  }

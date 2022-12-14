@@ -1,0 +1,103 @@
+.ciContainer {
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pwc {
+    text-align: left;
+    margin-left: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 20px;
+}
+
+.ciOutline {
+    background-color: plum;
+    /* margin: 0rem 35rem; */
+    margin-top: 5rem;
+    height: 30rem;
+    border-radius: 20px;
+    width: 25rem;
+}
+
+.ciOutline > label > input {
+    text-align: center;
+    border-width: 1px;
+
+}
+
+.ciCardTitle {
+    text-align: left;
+    font-size: 15px;
+}
+
+.ciNumber {
+    width: 18rem;
+    border-width: 1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.expcvv > label > input {
+    text-align: center;
+    width: 9rem;
+    margin-bottom: 2rem;
+    border-width: 1px;
+}
+
+.ciLeft {
+    border-bottom-left-radius: 10px;
+}
+
+.ciRight {
+    border-bottom-right-radius: 10px;
+}
+
+.ciNameTitle {
+    text-align: left;
+    font-size: 15px;
+}
+
+.ciName {
+    width: 18rem;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.ciButton {
+    margin-top: 6rem;
+    width: 18rem;
+    border: none;
+    padding: 0.5rem 0rem;
+    border-radius: 10px;
+    animation: 3s ciButton infinite
+}
+
+@keyframes ciButton {
+    0% { background-color: #4bb2de; }
+    50% { background-color: #60f09e; }
+    100% { background-color: #4bb2de; }
+}
+
+@keyframes cy {
+    0% { background-color: #de4b50; }
+    50% { background-color: #f871ef; }
+    100% { background-color: #de4b50; }
+}
+
+.ciCancel {
+    margin-top: 3.5rem;
+    text-align: left;
+    text-decoration: underline;
+    font-size: 13px;
+    margin-left: 0.5rem;
+    color: #de4b50;
+    width: 3.5rem;
+}
+
+.ciCancel:hover {
+    color: black;
+}

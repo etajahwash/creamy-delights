@@ -1,0 +1,39 @@
+.payP {
+    height: 0.5rem;
+}
+
+.payOne {
+    color: black;
+    animation: 2s payFirst infinite;
+}
+
+.payTwo {
+    color: black;
+    animation: 2s paySecond infinite;
+}
+
+.payThree {
+    color: black;
+    animation: 2s payThird infinite;
+}
+
+@keyframes payFirst {
+    0% { color: black; }
+    25% { color: black; }
+    50% { color: transparent; }
+    100% { color: transparent; }
+}
+
+@keyframes paySecond {
+    0% { color: transparent; }
+    25% { color: transparent; }
+    50% { color: black; }
+    100% { color: transparent; }
+}
+
+@keyframes payThird {
+    0% { color: transparent; }
+    50% { color: transparent; }
+    75% { color: black;}
+    100%{ color: transparent}
+}

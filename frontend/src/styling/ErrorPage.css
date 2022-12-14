@@ -1,0 +1,27 @@
+/* body {
+
+} */
+
+.errorSection {
+    /* margin-top: 3rem; */
+    text-align: center;
+    box-sizing: border-box;
+    height: 90vh;
+    background-color: plum;
+}
+
+.errorContents {
+    padding: 13rem 0px;
+}
+
+.oops {
+    font-size: 50px;
+    padding-bottom: 1rem;
+    color: white;
+}
+
+.errorText {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 3rem;
+}

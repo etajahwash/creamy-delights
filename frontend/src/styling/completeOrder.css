@@ -1,0 +1,88 @@
+.coContainer {
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.coTitle {
+    /* text-align: left; */
+    margin-left: -0.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 20px;
+}
+
+.coOutline {
+    background-color: rgb(243, 229, 229);
+    /* margin: 0rem 35rem; */
+    margin-top: 5rem;
+    height: 30rem;
+    border-radius: 20px;
+    width: 25rem;
+}
+
+.coComplete {
+    padding-top: 9.5rem;
+}
+
+.coComplete > span {
+    letter-spacing: 0.5rem;
+}
+
+.coFirst {
+    animation: 2s coFirst infinite;
+}
+
+.coSecond {
+    animation: 2s coSecond infinite;
+
+}
+
+.coThird {
+    animation: 2s coThird infinite;
+
+}
+
+.coRedirect {
+    margin-top: -1.5rem;
+    margin-left: -0.5rem;
+}
+
+
+@keyframes coFirst {
+    0% { color: black; }
+    25% { color: black; }
+    50% { color: rgb(243, 229, 229); }
+    100% { color: rgb(243, 229, 229); }
+}
+
+@keyframes coSecond {
+    0% { color: rgb(243, 229, 229); }
+    25% { color: rgb(243, 229, 229); }
+    50% { color: black; }
+    100% { color: rgb(243, 229, 229); }
+}
+
+@keyframes coThird {
+    0% { color: rgb(243, 229, 229); }
+    50% { color: rgb(243, 229, 229); }
+    75% { color: black;}
+    100%{ color: rgb(243, 229, 229)}
+}
+
+@keyframes cy {
+    0% { color: #de4b50; }
+    50% { color: #f871ef; }
+    100% { color: #de4b50; }
+}
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+

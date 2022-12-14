@@ -1,0 +1,563 @@
+.testimoniesContainer {
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    padding-top: 0.5rem;
+}
+
+.testTitle {
+    margin-bottom: 2rem;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.testSectionWrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 15rem;
+    text-align: center;
+}
+
+.secOne {
+    justify-content: space-between;
+    /* display: flex; */
+    margin-bottom: 4rem;
+}
+
+.secTwo {
+    justify-content: space-between;
+    /* display: flex; */
+}
+
+.eren, .armin {
+    /* margin-left: 10rem; */
+    border-radius: 20px;
+    width: 25rem;
+    height: 15rem;
+    margin-bottom: 2rem;
+}
+
+.mikasa, .erwin {
+    /* margin-right: 10rem; */
+    border-radius: 20px;
+    width: 25rem;
+    height: 15rem;
+}
+
+.eren {
+    border: solid 10px #554BDE;
+}
+
+.erenText {
+    width: 21rem;
+    height: 11rem;
+    border: solid #E8E479;
+    background-color: #E8E479;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.armin {
+    border: solid 10px #79e881;
+}
+
+.arminText {
+    width: 21rem;
+    height: 11rem;
+    border: solid #F060D3;
+    background-color: #F060D3;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.mikasa {
+    border: solid 10px plum;
+}
+
+.mikasaText {
+    width: 21rem;
+    height: 11rem;
+    border: solid #FAB65C;
+    background-color: #FAB65C;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.erwin {
+    border: solid 10px #e87979;
+}
+
+.erwinText {
+    width: 21rem;
+    height: 11rem;
+    border: solid #66E5F3;
+    background-color: #66E5F3;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.initial {
+    font: 600;
+    font-size: 40px;
+    font-family: 'Lovers Quarrel', cursive;
+}
+
+.secOne > div > div > p {
+    margin-top: 3rem;
+    width: 21rem;
+    line-height: 2rem;
+}
+
+.arminText > p {
+    margin-top: 3rem;
+    width: 20.5rem;
+    line-height: 2rem;
+}
+
+.erwinText > p {
+    margin-top: 4rem;
+    line-height: 2rem;
+}
+
+.sig {
+    font-weight: 800;
+}
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1460px) {
+    /* .eren {
+        margin-top: 20rem;
+    } */
+
+    .testTitle {
+        margin-left: 3rem;
+    }
+}
+
+@media screen and (max-width: 1368px) {
+    /* .eren {
+        margin-top: 20rem;
+    } */
+
+    .testTitle {
+        margin-left: 6rem;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    /* .eren {
+        margin-top: 20rem;
+    } */
+
+    .testTitle {
+        margin-left: 8rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    /* .eren {
+        margin-top: 20rem;
+    } */
+
+    .testTitle {
+        margin-left: 9rem;
+    }
+}
+
+@media screen and (max-width: 1104px) {
+    /* .eren {
+        margin-top: 20rem;
+    } */
+
+    .testTitle {
+        margin-left: 0rem;
+    }
+
+    .testSectionWrap {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 22rem;
+        overflow-y: visible;
+    }
+
+    .testimoniesContainer {
+        overflow-y: scroll;
+        padding-bottom: 5rem;
+    }
+
+    .secTwo {
+        margin-top: -2rem;
+    }
+}
+
+@media screen and (max-width: 1054px) {
+    /* .eren {
+        margin-top: 20rem;
+    } */
+
+    .testTitle {
+        margin-left: -2rem;
+    }
+
+    .testSectionWrap {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 20rem;
+        overflow-y: visible;
+    }
+
+    .testimoniesContainer {
+        overflow-y: scroll;
+        /* background-repeat: repeat-y; */
+    }
+}
+
+@media screen and (max-width: 1004px) {
+    /* .eren {
+        margin-top: 20rem;
+    } */
+
+    .testTitle {
+        margin-left: -4rem;
+    }
+
+    .testSectionWrap {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 18rem;
+        overflow-y: visible;
+    }
+
+    .testimoniesContainer {
+        overflow-y: scroll;
+        /* background-repeat: repeat-y; */
+    }
+}
+
+@media screen and (max-width: 954px) {
+    /* .eren {
+        margin-top: 20rem;
+    } */
+
+    .testTitle {
+        margin-left: 0rem;
+    }
+
+    .testSectionWrap {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 16rem;
+        overflow-y: visible;
+    }
+
+    .testimoniesContainer {
+        overflow-y: scroll;
+        /* background-repeat: repeat-y; */
+    }
+}
+
+@media screen and (max-width: 872px) {
+    /* .eren {
+        margin-top: 20rem;
+    } */
+
+    .testTitle {
+        margin-left: 0rem;
+    }
+
+    .testSectionWrap {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 16rem;
+        overflow-y: visible;
+    }
+
+    .testimoniesContainer {
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (max-width: 830px) and (min-height: 980px) and (max-height: 1200px) {
+    /* .eren {
+        margin-top: 20rem;
+    } */
+
+    .testTitle {
+        margin-left: 0rem;
+        margin-top: 4rem;
+        margin-bottom: 6rem;
+    }
+
+    .testSectionWrap {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 0.4rem;
+        overflow-y: visible;
+    }
+
+    .testimoniesContainer {
+        overflow-y: scroll;
+    }
+
+    .secTwo {
+        margin-top: 0rem;
+    }
+}
+
+@media screen and (max-width: 808px) {
+    /* .eren {
+        margin-top: 20rem;
+    } */
+
+    .testSectionWrap {
+        margin-left: 12.5rem;
+    }
+}
+
+@media screen and (max-width: 808px) {
+
+    .testSectionWrap {
+        margin-left: 9.5rem;
+    }
+}
+
+@media screen and (min-width: 760px) and (max-width: 800px) and (min-height: 1000px) and (max-height: 1100px) {
+    /* .eren {
+        margin-top: 20rem;
+    } */
+
+    .testTitle {
+        margin-left: 0rem;
+        margin-top: 4rem;
+        margin-bottom: 6rem;
+    }
+
+    .testSectionWrap {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: -0.5rem;
+        overflow-y: visible;
+    }
+
+    .testimoniesContainer {
+        overflow-y: scroll;
+    }
+
+    .secTwo {
+        margin-top: 0rem;
+    }
+
+    .eren, .mikasa, .armin, .erwin {
+        border: none;
+    }
+
+    .erenText, .mikasaText, .arminText, .erwinText {
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 608px) {
+    /* .eren {
+        margin-top: 20rem;
+    } */
+
+    .testSectionWrap {
+        margin-left: 6rem;
+    }
+}
+
+@media screen and (max-width: 544px) {
+
+    .testSectionWrap {
+        margin-left: 4rem;
+    }
+}
+
+@media screen and (max-width: 522px) {
+    /* Hides scrollbar display for chrome */
+    .testimoniesContainer::-webkit-scrollbar {
+        display: none;
+    }
+          
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .testimoniesContainer {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    }
+}
+
+@media screen and (max-width: 502px) {
+
+    .testSectionWrap {
+        margin-left: 2rem;
+    }
+
+    .testimoniesContainer {
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-width: 463px) {
+
+    .testSectionWrap {
+        margin-left: 1.55rem;
+    }
+}
+
+@media screen and (max-width: 437px) {
+
+    .testSectionWrap {
+        margin-left: .55rem;
+    }
+}
+
+@media screen and (max-width: 415px) and (min-height: 800px) and (max-height: 950px) {
+
+    .testSectionWrap {
+        margin-left: 0.51rem;
+    }
+
+
+}
+
+@media screen and (max-width: 412px) {
+
+    .testSectionWrap {
+        margin-left: 0.18rem;
+    }
+}
+
+@media screen and (max-width: 410px) {
+
+    .testSectionWrap {
+        margin-left: 0rem;
+    }
+
+    .eren, .mikasa, .armin, .erwin {
+        border: none;
+    }
+
+    .erenText, .mikasaText, .arminText, .erwinText {
+        border-radius: 20px;
+    }
+
+    .secTwo {
+        margin-top: -4rem;
+    }
+}
+
+@media screen and (max-width: 388px) {
+
+    .testSectionWrap {
+        margin-left: 0rem;
+    }
+}
+
+@media screen and (max-width: 383px) {
+
+    .testSectionWrap {
+        margin-left: -0.4rem;
+    }
+}
+
+@media screen and (max-width: 377px) and (min-height: 640px) and (max-height: 668px) {
+
+    .testSectionWrap {
+        padding-left: 0.8rem;
+    }
+
+
+}
+
+@media screen and (max-width: 368px) {
+
+    .testSectionWrap {
+        margin-left: -0.7rem;
+    }
+}
+
+@media screen and (max-width: 361px) and (min-height: 720px) and (max-height: 800px) {
+
+    .testSectionWrap {
+        padding-left: 0.33rem;
+    }
+}
+
+
+@media screen and (max-width: 361px) {
+
+    .testSectionWrap {
+        margin-left: -0.9rem;
+    }
+}
+
+
+@media screen and (max-width: 383px) {
+    .testTitle {
+        font-size: 20px;
+    }
+
+    .testSectionWrap {
+        margin-left: -1.2rem;
+    }
+}
+
+@media screen and (max-width: 347px) {
+    .testTitle {
+        font-size: 20px;
+    }
+
+    .testSectionWrap {
+        margin-left: 0.2rem;
+    }
+
+    .erenText, .mikasaText, .erwinText, .arminText {
+        width: 18rem;
+    }
+
+    .erenText > p, .mikasaText > p, .erwinText > p, .arminText > p {
+        width: 13rem;
+        font-size: 13px;
+        margin-left: 2rem;
+    }
+
+    .erenText > p, .mikasaText > p {
+        margin-left: -1.5rem;
+        width: 1rem;
+        padding: 0rem 2.1rem;
+    }
+}
+
+@media screen and (max-width: 336px) {
+
+    .testSectionWrap {
+        margin-left: -0.4rem;
+    }
+}
+
+@media screen and (max-width: 290px) {
+
+    .testSectionWrap {
+        margin-left: -1.6rem;
+    }
+    
+    .eren, .mikasa, .armin, .erwin {
+    border: none;
+}
+
+.erenText, .mikasaText, .arminText, .erwinText {
+    border-radius: 20px;
+    width: 16rem;
+}
+
+.erenText > p, .mikasaText > p {
+    padding: 0rem 4rem;
+    margin-left: -2.5rem;
+}
+
+}

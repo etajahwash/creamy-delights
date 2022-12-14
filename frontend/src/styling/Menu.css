@@ -1,0 +1,117 @@
+.loading {
+    font-size: 40px;
+    color: red;
+}
+
+.menuSection {
+    background-color: lavender;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+}
+
+.menuWrapper {
+    height: 90vh;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin-top: 0.5rem;
+}
+
+.menuProducts {
+    /* margin: 1rem; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: -2rem;
+}
+
+.menuTitle {
+    font-family: 'Berkshire Swash', cursive;
+    /* margin-top: 1.5rem; */
+    padding-top: 2rem;
+    font-size: 40px;
+}
+
+.menuPara {
+    font-size: 12px;
+    margin-top: 1rem;
+    margin-bottom: 3.5rem;
+}
+
+.here {
+    color: red;
+    text-decoration: underline;
+}
+
+.cardWrapper {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.card:hover {
+    transform: scale(0.9);
+}
+
+.productText {
+    text-align: center;
+    font-family: 'Berkshire Swash', cursive;
+    padding-top: 13rem;
+    margin-left: -2.5rem;
+}
+
+.menuSpacer {
+    margin-bottom: 5rem;
+}
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 884px) {
+    .menuProducts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: -2rem;
+    }
+}
+
+@media screen and (max-width: 713px) {
+    .menuProducts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: -2rem;
+        margin-left: 1rem;
+    }
+
+    .menuWrapper {
+        margin-top: 2rem;
+    }
+
+    .menuPara {
+        margin-bottom: 5rem;
+
+    }
+}
+
+@media screen and (max-width: 522px) {
+    .menuProducts {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: -2rem;
+    }
+
+    /* Hides scrollbar display for chrome */
+    .menuWrapper::-webkit-scrollbar {
+            display: none;
+    }
+          
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .menuWrapper {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    }
+}

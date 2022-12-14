@@ -1,0 +1,29 @@
+.checkedOutWrapper {
+    text-align: center;
+    /* padding-top: 11rem; */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkedOutOverlay {
+    text-align: center;
+    /* margin-left: 34rem; */
+    background-color: rgba(240, 248, 255, 0.537);
+    border-radius: 20px;
+    width: 30rem;
+    padding: 7rem 4rem;
+}
+
+.checkedOutOverlay > button {
+    margin-top: 2rem;
+    border-radius: 20px;
+    border: none;
+    padding: 0.5rem 0.9rem;
+    background-color: palevioletred;
+}
+
+.checkedOutOverlay > button:hover {
+    background-color: powderblue;
+}

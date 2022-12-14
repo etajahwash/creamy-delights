@@ -1,0 +1,13 @@
+.productContainer {
+    height: 16rem;
+    margin-top: 1rem;
+}
+
+.card:hover {
+    transform: scale(0.9);
+}
+
+.productText {
+    text-align: center;
+    font-family: 'Berkshire Swash', cursive;
+}

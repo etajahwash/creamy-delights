@@ -1,0 +1,460 @@
+.buildSection {
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* .buildLeft, .buildRight {
+    border: black solid;
+} */
+
+.buildWrapper {
+    height: 90vh;
+    overflow-y: auto;
+}
+
+.buildFlex {
+    display: flex;
+}
+
+.buildEmoji {
+    font-size: 39px;
+    padding-right: 0.5rem;
+}
+
+.buildTitle {
+    margin-left: 22.5rem;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    color: #66E5F3;
+    margin-bottom: -5rem;
+}
+
+.buildImgContainerSection {
+    height: 100vh;
+}
+
+.buildImgContainer {
+    position: relative;
+    height: 100%;
+    width: 50rem;
+}
+
+.buildBackContainer {
+    position: absolute;
+    display: flex;
+    margin-left: 1rem;
+    margin-top: 38.8rem;
+}
+
+.buildBack {
+    font-size: 15px;
+    margin-top: 0.05rem;
+}
+
+.buildForm {
+    justify-content: center;
+    margin-top: 7rem;
+}
+
+.creationSection {
+    width: 40rem;
+    height: 25rem;
+    background-color: rgba(241, 163, 241, 0.694);
+    margin-left: 2.3rem;
+    display: flex;
+    border-radius: 20px;
+}
+
+.buildNameSection {
+    margin-bottom: 0rem;
+}
+
+.buildNameLabel {
+    margin-bottom: -1rem;
+    font-size: 25px;
+    width: 18rem;
+    padding-left: 1.5rem;
+    margin-top: 5rem;
+}
+
+.buildNameInput {
+    margin-left: 3.9rem;
+    margin-top: 0.5rem;
+    margin-bottom: 5.5rem;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    animation: 3s buildColor infinite;
+}
+
+@keyframes buildColor {
+    0% { color: #F060D3; }
+    25% { color: #FAB65C; }
+    50% { color: #79e881; }
+    75% { color: #554BDE; }
+    100% { color: #F060D3; }
+}
+
+/* .buildFlavor {
+    border: solid black;
+} */
+
+.baseFlavorName {
+    font-size: 20px;
+}
+
+.baseFlavorSelect {
+    border-radius: 13px;
+    width: 7rem;
+    text-align: center;
+    animation: 3s buildColor infinite;
+}
+
+.buildToppings {
+    overflow: hidden;
+}
+
+.toppingsTitle {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.toppingsContainer {
+    height: 19.2rem;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.386);
+    margin: 0rem 0.9rem;
+    border-radius: 20px;
+    /* -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; */
+}
+
+.toppingsContainer > label {
+    margin-top: 2.3rem;
+}
+
+
+
+
+
+.buildSubmitButton {
+    margin-top: 3rem;
+    background-color: #d6ecd7;
+    border-radius: 20px;
+    border: none;
+    padding: 0.3rem 2rem;
+    animation: 1s submitButton infinite;
+}
+
+.buildSubmitButton:hover {
+    transform: scale(1.08);
+}
+
+@keyframes submitButton {
+    0% {color: plum;}
+    50% {color: rgb(119, 119, 235);}
+    100% {color: plum;}
+}
+
+.dontShowPrice {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1376px) {
+    .buildImgContainer {
+        width: 50rem;
+        height: 50rem;
+        margin-left: -7rem;
+        margin-top: -5rem;    
+    }
+
+    .buildBackContainer {
+        margin-left: 7.5rem;
+        margin-top: 42rem;
+    }
+
+    .creationSection {
+        margin-left: -2rem;
+    }
+
+    .buildSubmitButton {
+        margin-left: -5rem;
+    }
+    
+}
+
+@media screen and (max-width: 1234px) {
+    .buildImgContainer {
+        display: none;  
+    }
+
+    .buildBackContainer {
+        margin-left: 7.5rem;
+        margin-top: 42rem;
+    }
+
+    .buildTitle {
+        margin-left: 16rem;
+    }
+
+    .creationSection {
+        margin-left: -20rem;
+    }
+
+    .buildSubmitButton {
+        margin-left: -39rem;
+    }
+    
+}
+
+@media screen and (max-width: 1125px) {
+
+    .buildTitle {
+        margin-left: 16rem;
+    }
+
+    .creationSection {
+        margin-left: -15rem;
+    }
+
+    .buildSubmitButton {
+        margin-left: -24rem;
+    }
+    
+}
+
+@media screen and (max-width: 983px) {
+
+    .buildTitle {
+        margin-left: 8rem;
+    }
+
+    .creationSection {
+        margin-left: -19rem;
+    }
+
+    .buildSubmitButton {
+        margin-left: -24rem;
+    }
+    
+}
+
+@media screen and (max-width: 859px) {
+
+    .buildTitle {
+        margin-left: 8.5rem;
+        font-size: 40px;
+    }
+
+    .creationSection {
+        margin-left: -19rem;
+    }
+
+    .buildSubmitButton {
+        margin-left: -24rem;
+    }
+    
+}
+
+@media screen and (max-width: 714px) {
+
+    .buildTitle {
+        margin-left: 6.5rem;
+        font-size: 32px;
+    }
+
+    .creationSection {
+        margin-left: -19rem;
+    }
+
+    .buildSubmitButton {
+        margin-left: -24rem;
+    }
+    
+}
+
+@media screen and (max-width: 675px) {
+    .buildSection {
+        overflow-y: scroll;
+    }
+
+    .buildTitle {
+        margin-left: 5.5rem;
+        font-size: 32px;
+    }
+
+    .creationSection {
+        margin-left: -13.5rem;
+        display: grid;
+        width: 27rem;
+        height: 50rem;
+    }
+
+    .toppingsContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .buildToppings {
+        margin-left: 6.8rem;
+    }
+
+    .buildSubmitButton {
+        margin-left: -24rem;
+    }
+
+    .buildNameSection {
+        margin-left: 3.5rem;
+    }
+
+    .baseFlavor {
+        margin-left: 9.8rem;
+    }
+
+    .baseFlavorName {
+        width: 10rem;
+        text-align: left;
+    }
+
+    .buildSubmitButton {
+        margin-top: -1rem;
+        margin-left: -21rem;
+    }
+    
+}
+
+@media screen and (max-width: 545px) {
+    .buildSection {
+        overflow-y: scroll;
+    }
+
+    .buildTitle {
+        margin-left: 2.5rem;
+        font-size: 25px;
+    }
+
+    .creationSection {
+        margin-left: -10rem;
+        /* padding-left: 0; */
+        padding-right: 5rem;
+        display: grid;
+        width: 22rem;
+        height: 50rem;
+    }
+
+    .toppingsContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .buildToppings {
+        margin-left: 5.8rem;
+    }
+
+    .buildNameSection {
+        margin-left: 1.2rem;
+    }
+
+    .baseFlavor {
+        margin-left: 7rem;
+    }
+
+    .baseFlavorName {
+        width: 10rem;
+    }
+
+    .buildSubmitButton {
+        margin-top: -1rem;
+        margin-left: -21rem;
+    }
+
+    .buildTitle {
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width: 493px) and (min-width: 400px) and (max-height: 930px) and (min-height: 700px) {
+    .buildSubmitButton {
+        margin-left: -12rem;
+    }
+}
+
+@media screen and (max-width: 396px) {
+    .buildSection {
+        overflow-y: scroll;
+    }
+
+    .buildTitle {
+        margin-left: 5.5rem;
+        font-size: 22px;
+        width: 14rem;
+        text-align: center;
+    }
+
+    .creationSection {
+        margin-left: -12.5rem;
+        /* padding-left: 0; */
+        /* padding-right: 6rem; */
+        display: grid;
+        width: 25rem;
+        height: 50rem;
+        background-color: rgba(255, 255, 255, 0.445);
+    }
+
+    .toppingsContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .buildToppings {
+        margin-left: 7.7rem;
+    }
+
+    .buildNameSection {
+        margin-left: 3.2rem;
+    }
+
+    .baseFlavor {
+        margin-left: 9.4rem;
+    }
+
+    .baseFlavorName {
+        width: 10rem;
+    }
+
+    .buildSubmitButton {
+        margin-top: -1rem;
+        margin-left: -11rem;
+    }
+    
+}
+
+@media screen and (max-width: 299px) {
+
+    .buildTitle {
+        margin-left: 1.5rem;
+        font-size: 22px;
+        width: 14rem;
+        text-align: center;
+    }
+
+    .buildSubmitButton {
+        margin-top: -1rem;
+        margin-left: -7.5rem;
+    }
+    
+}

@@ -1,0 +1,158 @@
+.loginSection {
+    height: 100vh;
+}
+
+.loginTitle {
+    margin-left: 5rem;
+    padding-top: 5rem;
+    font-size: 50px;
+    margin-bottom: 1.5rem;
+}
+
+.sut {
+    text-align: center;
+}
+
+.lps {
+    border-radius: 30px;
+    border-style: none;
+}
+
+.signUpButton {
+    margin-left: 10.6rem;
+    padding: 0.5rem 4rem;
+    background-color: #c9ebd1;
+    margin-bottom: 5rem;
+}
+
+.signUpButton:hover {
+    background-color: #66E5F3;
+    transform: scale(1.05);
+}
+
+.loginButton {
+    padding: 0.3rem 3.5rem;
+    background-color: #f5a3e5;
+    margin-left: 11.3rem;
+}
+
+.loginButton:hover {
+    background-color: #FAB65C;
+    transform: scale(1.05);
+}
+
+.already {
+    margin-left: 12.1rem;
+    font-size: 15px;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1280px) {
+    .already {
+        color: black;
+        background-color: rgba(240, 248, 248, 0.729);
+        width: 8.5rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .loginTitle {
+        margin-left: 0rem;
+        text-align: center;
+    }
+
+    .already {
+        margin-left: 13.8rem;
+    }
+
+    .signUpButton {
+        margin-left: 12rem;
+    }
+
+    .loginButton {
+        margin-left: 13.1rem;
+    }
+}
+
+@media screen and (max-width: 446px) {
+    .loginTitle {
+        margin-left: 0rem;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .already {
+        margin-left: 10.2rem;
+    }
+
+    .signUpButton {
+        margin-left: 8.5rem;
+    }
+
+    .sut {
+        background-color: rgba(255, 255, 255, 0.498);
+    }
+
+    .loginButton {
+        margin-left: 9.7rem;
+    }
+}
+
+@media screen and (max-width: 427px) {
+    .loginTitle {
+        margin-left: 0rem;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .already {
+        margin-left: 8.9rem;
+    }
+
+    .signUpButton {
+        margin-left: 7.5rem;
+    }
+
+    .sut {
+        background-color: rgba(255, 255, 255, 0.498);
+    }
+
+    .loginButton {
+        margin-left: 8.3rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .liBundle {
+        margin-left: -1rem
+    }
+}
+
+@media screen and (max-width: 370px) and (min-width:355px) and (min-height: 700px) and (max-height: 790px) {
+    .liBundle {
+        margin-left: -2rem
+    }
+}
+
+@media screen and (max-width: 354px) {
+    .liBundle {
+        margin-left: -2rem
+    }
+}
+
+@media screen and (max-width: 318px) {
+    .liBundle {
+        margin-left: -3.5rem
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .liBundle {
+        margin-left: -4.5rem
+    }
+}

@@ -1,0 +1,526 @@
+.profileSection {
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.profilePicContainer {
+  margin-left: 39rem;
+  padding-top: 1rem;
+}
+
+.profileUpperSection {
+  display: flex;
+}
+
+.profileWelcome {
+  padding-right: 12rem;
+  margin-left: -11rem;
+  padding-top: 2rem;
+  font-size: 45px;
+  font-family: "Leckerli One", cursive;
+  color: palevioletred;
+}
+
+.profileWrapper {
+  padding-right: 6rem;
+  margin-left: -7.1rem;
+}
+
+.profileName {
+  padding-top: 2rem;
+  font-size: 45px;
+  font-family: "Leckerli One", cursive;
+  color: palevioletred;
+}
+
+.profilePic {
+  background-color: aqua;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50px;
+}
+
+.profilePic:hover {
+  /* margin-left: 2rem; */
+}
+
+.logOutText {
+  text-align: center;
+  margin-left: 1.05rem;
+  margin-top: 0.5rem;
+  width: 4rem;
+  font-size: 15px;
+  background-color: #99d5ef;
+  border-radius: 25px;
+}
+
+.logOutText:hover {
+  transform: scale(1.05);
+}
+
+.profileItemsSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100vw;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.profileHr {
+  width: 15rem;
+  margin-left: 6.5rem;
+  margin-bottom: 1rem;
+}
+
+.creationsSection {
+  margin-left: -30rem;
+  /* margin-right: 25rem; */
+  overflow-y: hidden;
+}
+
+.creationsSection,
+.ordersSection {
+  background-color: #ffffff58;
+  height: 30rem;
+  width: 28rem;
+  padding-top: 1rem;
+  border-radius: 20px;
+}
+
+.profileKey {
+  margin-left: 4rem;
+}
+
+.creationTitle {
+  letter-spacing: 0.4rem;
+  font-weight: 800;
+  animation: 3s cy infinite;
+}
+
+.ordersSection {
+  background-color: #ffffff58;
+  overflow: hidden;
+  margin-left: -28rem;
+}
+
+.creationProductContainer,
+.orderProductContainer {
+  overflow-y: auto;
+  height: 24rem;
+  /* width: 30rem; */
+}
+.creationProductContainer::-webkit-scrollbar,
+.orderProductContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.creationList {
+  margin-bottom: 3.5rem !important;
+}
+
+.profileTwin {
+  letter-spacing: 1.8rem;
+  font-weight: 800;
+}
+
+.profileBuild {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  animation: 3s mid infinite;
+  margin-left: 1.3rem;
+}
+
+.profileShop {
+  margin-top: 5rem;
+  animation: 3s lisubmit infinite;
+  margin-left: 2.1rem;
+}
+
+.midOr {
+  color: plum;
+  /* animation: 3s mid infinite; */
+}
+
+@keyframes mid {
+  0% {
+    color: #4bb2de;
+  }
+  50% {
+    color: #60f09e;
+  }
+  100% {
+    color: #4bb2de;
+  }
+}
+
+@keyframes cy {
+  0% {
+    color: #de4b50;
+  }
+  50% {
+    color: #f871ef;
+  }
+  100% {
+    color: #de4b50;
+  }
+}
+
+.profileOrdersContainer {
+  overflow-y: scroll;
+  height: 100%;
+  padding-bottom: 2rem;
+  text-align: left;
+  text-indent: 0.5rem;
+  font-weight: 600;
+}
+
+.orderItem {
+  display: flex;
+}
+
+.profileOrderSec {
+  border: black solid 2px;
+  width: 23rem;
+  margin-left: 1.5rem;
+  margin-bottom: 5.5rem;
+  overflow-y: auto;
+  border-radius: 20px;
+}
+
+.pOrdersDate {
+}
+
+.pOrdersName {
+  width: 12rem;
+}
+
+.pOrdersQty {
+}
+
+.pOrdersPrice {
+  margin-right: 1.5rem;
+}
+
+.pOrdersStatus {
+  text-align: right;
+  margin-right: 0.5rem;
+  margin-bottom: 0rem;
+}
+
+.spaceBetweenContainer {
+  display: flex;
+}
+
+.spaceBetweenContainer > div {
+  display: flex;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1373px) {
+  .profileWelcome {
+    margin-left: -13.5rem;
+  }
+}
+
+@media screen and (max-width: 1307px) {
+  .profileWelcome {
+    margin-left: -14.5rem;
+  }
+}
+
+@media screen and (max-width: 1237px) {
+  .profileWelcome {
+    margin-left: -16rem;
+  }
+}
+
+@media screen and (max-width: 1143px) {
+  .profileWelcome {
+    margin-left: -17rem;
+  }
+}
+
+@media screen and (max-width: 1081px) {
+  .profileWelcome {
+    margin-left: -18rem;
+  }
+}
+
+@media screen and (max-width: 1055px) {
+  .profileWelcome {
+    margin-left: -23rem;
+  }
+
+  .profileItemsSection {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .creationsSection {
+    margin-left: -17rem;
+    margin-top: 2rem;
+  }
+
+  .ordersSection {
+    margin-left: -17rem;
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 852px) {
+  .profilePicContainer {
+    margin-left: 31rem;
+  }
+}
+
+@media screen and (max-width: 728px) {
+  .profilePicContainer {
+    margin-left: 26rem;
+  }
+}
+
+@media screen and (max-width: 641px) {
+  .profilePicContainer {
+    margin-left: 24rem;
+  }
+
+  .profileWelcome {
+    margin-right: -4rem;
+    margin-left: -19rem;
+  }
+
+  .profileWrapper {
+    margin-right: -4rem;
+  }
+}
+
+@media screen and (max-width: 579px) {
+  .profilePicContainer {
+    margin-left: 21rem;
+  }
+
+  .profileWelcome {
+    margin-right: -4rem;
+    margin-left: -19rem;
+  }
+
+  .profileWrapper {
+    margin-right: -4rem;
+  }
+}
+
+@media screen and (max-width: 532px) {
+  .profilePicContainer {
+    margin-left: 19.5rem;
+  }
+
+  .profileWelcome {
+    margin-right: -4rem;
+    margin-left: -16rem;
+    font-size: 35px;
+  }
+
+  .profileName {
+    font-size: 35px;
+    width: 5rem;
+  }
+
+  .profileWrapper {
+    margin-right: -4rem;
+  }
+}
+
+@media screen and (max-width: 496px) {
+  .profilePicContainer {
+    margin-left: 18.5rem;
+  }
+
+  .profileWelcome {
+    margin-right: -4rem;
+    margin-left: -16rem;
+    font-size: 35px;
+  }
+
+  .profileName {
+    font-size: 35px;
+  }
+
+  .profileWrapper {
+    margin-right: -4rem;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .profilePicContainer {
+    margin-left: 17.5rem;
+  }
+
+  .profileWelcome {
+    margin-right: -4rem;
+    margin-left: -16rem;
+    font-size: 35px;
+  }
+
+  .profileName {
+    font-size: 35px;
+  }
+
+  .profileWrapper {
+    margin-right: -4rem;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .profilePicContainer {
+    margin-left: 16.5rem;
+  }
+
+  .profileWelcome {
+    margin-right: -4rem;
+    margin-left: -16rem;
+    font-size: 35px;
+  }
+
+  .profileName {
+    font-size: 35px;
+  }
+
+  .profileWrapper {
+    margin-right: -4rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .profilePicContainer {
+    margin-left: 16.5rem;
+  }
+
+  .profileWelcome {
+    margin-right: -4rem;
+    margin-left: -16rem;
+    font-size: 30px;
+  }
+
+  .profileName {
+    font-size: 30px;
+  }
+
+  .profileWrapper {
+    margin-right: -4rem;
+  }
+}
+
+@media screen and (max-width: 380px) and (min-width: 365px) and (max-height: 680px) and (min-height: 600px) {
+  .profilePicContainer {
+    margin-left: 14.5rem;
+  }
+
+  .profileWelcome {
+    margin-left: -14rem;
+  }
+}
+
+@media screen and (max-width: 364px) {
+  .profilePicContainer {
+    margin-left: 14.5rem;
+  }
+
+  .profileWelcome {
+    margin-right: -5.5rem;
+    margin-left: -13rem;
+    font-size: 30px;
+  }
+
+  .profileName {
+    font-size: 30px;
+  }
+
+  .profilePic {
+    width: 4rem;
+    height: 4rem;
+    margin-left: 1rem;
+  }
+
+  .profileWrapper {
+    margin-right: -5rem;
+  }
+}
+
+@media screen and (max-width: 332px) {
+  .profilePicContainer {
+    margin-left: 12.8rem;
+  }
+
+  .profileWelcome {
+    margin-right: -5.5rem;
+    margin-left: -12rem;
+    font-size: 30px;
+  }
+
+  .profileName {
+    font-size: 30px;
+  }
+
+  .profilePic {
+    width: 4rem;
+    height: 4rem;
+    margin-left: 1rem;
+  }
+
+  .profileWrapper {
+    margin-right: -5rem;
+  }
+}
+
+@media screen and (max-width: 313px) {
+  .profilePicContainer {
+    margin-left: 11.8rem;
+  }
+
+  .profileWelcome {
+    margin-right: -5.5rem;
+    margin-left: -11.5rem;
+    font-size: 30px;
+  }
+
+  .profileName {
+    font-size: 30px;
+  }
+
+  .profilePic {
+    width: 4rem;
+    height: 4rem;
+    margin-left: 1rem;
+  }
+
+  .profileWrapper {
+    margin-right: -5rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .profilePicContainer {
+    margin-left: 11.5rem;
+  }
+
+  .profileWelcome {
+    margin-right: -5.5rem;
+    margin-left: -10.5rem;
+    font-size: 25px;
+  }
+
+  .profileName {
+    font-size: 25px;
+  }
+
+  .profilePic {
+    width: 4rem;
+    height: 4rem;
+    margin-left: 1rem;
+  }
+
+  .profileWrapper {
+    margin-right: -5rem;
+  }
+}
