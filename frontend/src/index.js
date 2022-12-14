@@ -13,6 +13,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import authReducer, { loadUser } from './features/authSlice';
 import buildReducer from './features/buildSlice';
 import updateReducer from './features/updateSlice';
+import { disableReactDevTools } from '@fvilers/disable-react-devtools'
+
+if (process.env.NODE_ENV === 'production') disableReactDevTools()
 
 const store = configureStore({
     reducer: {

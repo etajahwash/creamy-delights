@@ -177,9 +177,6 @@ const checkoutProd = async (req, res) => {
 //   WEBHOOK
 let endpointSecret;
 
-// endpointSecret =
-// "whsec_9bb9c2c89c389abeefe1bcabc61303ebcaeb9c007042930404786b601f0e55f2";
-
 const stripeWebhook = (req, res) => {
 
     const sig = req.headers['stripe-signature'];
