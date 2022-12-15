@@ -132,15 +132,7 @@ const cartSlice = createSlice ({
                    autoClose: 3500
                 })            
             }
-        },
-        // cartQuantity(state, action) {
-        //     const itemIndex = state.cartItems.findIndex(
-        //         (item) => item._id === action.payload._id
-        //     );
-        //     if(state.cartItems.cartQuantity >= 0) {
-        //         state.cartTotalQuantity = state.cartItems.cartQuantity
-        //     }
-        // }
+        }
     }
 })
 

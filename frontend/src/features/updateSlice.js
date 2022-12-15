@@ -2,7 +2,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import jwtDecode from 'jwt-decode'
 import axios from 'axios'
 import { url } from './api';
-import { toast } from 'react-toastify'
 
 const initialState = {
     token: localStorage.getItem('token'),
@@ -60,7 +59,6 @@ const updateSlice = createSlice({
                 const updateP = jwtDecode(action.payload)
                 return {
                     ...state,
-                    // token: action.payload,
                     _id: updateP._id,
                     name: updateP.name,
                     price: updateP.price,

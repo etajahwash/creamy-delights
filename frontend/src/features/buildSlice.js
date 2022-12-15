@@ -2,7 +2,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import jwtDecode from 'jwt-decode'
 import axios from 'axios'
 import { url } from './api';
-import { toast } from 'react-toastify'
 
 const initialState = {
     token: localStorage.getItem('token'),

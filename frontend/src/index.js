@@ -31,7 +31,6 @@ const store = configureStore({
     }
   });
 
-//   store.dispatch(productsFetch());
   store.dispatch(getTotals());
   store.dispatch(loadUser(null));
 

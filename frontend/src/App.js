@@ -6,7 +6,6 @@ import Navbar from './components/Navbar';
 import About from './components/About'
 import Menu from './components/Menu'
 import Checkout from './components/Checkout'
-import Product from './components/Product'
 import HomeScreen from './components/HomeScreen'
 import Build from './components/Build'
 import Profile from './components/Profile'
@@ -38,7 +37,6 @@ function App() {
           <Route path='/loggingin' element={<LoggingIn />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/menu/update/:id' element={<><Navbar /> <Update /></>} />
-          <Route path='/products' element={<><Navbar /> <Product /></>} />
           <Route path='/profile' element={<><Navbar /> <Profile /></>} />
           <Route path='/testimonies' element={<><Navbar /> <Testimonies /></>} />
           <Route path='*' element={<><Navbar /> <ErrorPage /></>} />
