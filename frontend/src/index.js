@@ -15,7 +15,10 @@ import buildReducer from './features/buildSlice';
 import updateReducer from './features/updateSlice';
 import { disableReactDevTools } from '@fvilers/disable-react-devtools'
 
-if (process.env.NODE_ENV === 'production') disableReactDevTools()
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('frontend/build'));
+  app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html')));
+}
 
 const store = configureStore({
     reducer: {
