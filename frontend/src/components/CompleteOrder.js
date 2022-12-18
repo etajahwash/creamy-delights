@@ -8,7 +8,7 @@ export default function CompleteOrder() {
   const navigate = useNavigate();
 
   window.addEventListener("load", orderComplete);
-
+ 
   function orderComplete() {
     dispatch(clearCart())
     setTimeout(() => {
