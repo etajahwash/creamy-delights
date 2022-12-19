@@ -9,7 +9,7 @@ import { productIdApi } from './features/productIdApi';
 import cartReducer, { getTotals } from './features/cartSlice';
 import './styling/Index.css'
 import './styling/App.css'
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 import authReducer, { loadUser } from './features/authSlice';
 import buildReducer from './features/buildSlice';
 import updateReducer from './features/updateSlice';
