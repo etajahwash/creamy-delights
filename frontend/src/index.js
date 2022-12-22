@@ -9,16 +9,13 @@ import { productIdApi } from './features/productIdApi';
 import cartReducer, { getTotals } from './features/cartSlice';
 import './styling/Index.css'
 import './styling/App.css'
-// import 'bootstrap/dist/css/bootstrap.css';
+// BELOW CANT GO IN PRODUCTION //
+import 'bootstrap/dist/css/bootstrap.css';
+// ENDS HERE //
 import authReducer, { loadUser } from './features/authSlice';
 import buildReducer from './features/buildSlice';
 import updateReducer from './features/updateSlice';
 import { disableReactDevTools } from '@fvilers/disable-react-devtools'
-// // require("dotenv").config();
-// const express = require('express');
-// const path = require('path');
-// const app = express();
-// let NODE_ENV=development
 
 if (process.env.NODE_ENV === 'production') disableReactDevTools()
 

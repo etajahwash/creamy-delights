@@ -68,7 +68,6 @@ export default function Individual() {
         backgroundImage: `url(${dots})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
-        // objectFit: 'cover',
         backgroundColor: "lavender",
       }}
     >
