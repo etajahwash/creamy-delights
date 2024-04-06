@@ -17,6 +17,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "jwt-decode": "^3.1.2",
+    "mongodb": "4.1",
     "net": "^1.0.2",
     "os-browserify": "^0.3.0",
     "path": "^0.12.7",
@@ -30,7 +31,7 @@
     "redux": "^4.2.0",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.2",
-    "web-vitals": "^2.1.4" 
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

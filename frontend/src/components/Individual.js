@@ -49,14 +49,14 @@ export default function Individual() {
   };
 
   const deleteProduct = (id) => {
-    cart.cartItems?.map((item) => (item._id === id) ? removingFromCart(item) : null);
+    // cart.cartItems?.map((item) => (item._id === id) ? removingFromCart(item) : null);
     axios
       .delete(`${backendIndAPI}/products/delete/${id}`)
       .then((res) => null)
       .catch((error) => console.log(error));
-    navigate("/menu");
-    navigate(0)
-    // setTimeout(navigate(0), 1000);
+    navigate(`/menu`);
+    // navigate(0)
+    setTimeout(navigate(0), 3000);
     toast(`You have deleted ${data.name}`, {
       position: "bottom-left",
       theme: "light",
@@ -67,6 +67,8 @@ export default function Individual() {
   function updateScreen() {
     navigate(`/menu/update/${id}`);
   }
+
+  console.log(id)
 
   return (
     <div
@@ -217,7 +219,7 @@ export default function Individual() {
                         </button>
                         <button
                           className="inDeleteButton"
-                          onClick={() => deleteProduct(data?._id)}
+                          onClick={() => deleteProduct(id)}
                         >
                           Delete
                         </button>
