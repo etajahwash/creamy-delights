@@ -4,7 +4,7 @@ const genAuthToken = require('../utils/genAuthToken')
 require('dotenv').config();
 const Stripe = require('stripe')
 require('dotenv').config()
-const stripe = Stripe(process.env.STRIPE_KEY)
+const stripe = Stripe(process.env.REACT_APP_STRIPE_KEY)
 
 
 // GET ALL PRODUCT
@@ -87,9 +87,31 @@ const buildProduct = async (req, res) => {
 
 // UPDATE PRODUCT
 const updateProduct = async (req, res) => {
+
+    const schema = Joi.object({
+        name: Joi.string().min(3).max(15).required(),
+        price: Joi.number().required(),
+        flavor: Joi.string().required(),
+        description: Joi.string(),
+        toppings: Joi.string().lowercase().required().valid('sprinkles', 'double scoop', 'maraschino cherries', 'cake', 'caramel sauce',
+        'whipped cream', 'strawberry sauce', 'crushed oreos', 'banana slices',
+        'chili oil', 'hot fudge', 'raspberries', "s'mores", 'blueberries', 'pretzels', 'almonds'),
+        imgUrl: Joi.string().required(),
+        matchId: Joi.string().required(),
+    })
+
+    // part of joi syntax to validate value against the defined schema
+    // this checks for errors
+    const { error } = schema.validate(req.body)
+    if (error) return res.status(400).send(`${error.details[0].message}`)
+
+    // checks if unique property (name, in this case) already exists. if so, error will appear
+    let updatedItem = await Product.findOne({name: req.body.name})
+    if (updatedItem) return res.status(400).send('Ice cream name already exists.')
+
     const { id } = req.params;
  
-    const updatedItem = {
+    updatedItem = {
         name: req.body.name,
         flavor: req.body.flavor,
         toppings: req.body.toppings,
@@ -137,7 +159,7 @@ const checkoutProd = async (req, res) => {
     const customer = await stripe.customers.create({
         metadata: {
             userId: req.body.userId,
-            orderId: req.body.data
+            orderId: req.body.data,
         }
     })
 
@@ -163,8 +185,8 @@ const checkoutProd = async (req, res) => {
       customer: customer.id,
       line_items,
       mode: 'payment',
-      success_url: `${process.env.CLIENT_URL}/completeOrder`,
-      cancel_url:  `${process.env.CLIENT_URL}/checkout`,
+      success_url: `${process.env.REACT_APP_CLIENT_URL}/completeOrder`,
+      cancel_url:  `${process.env.REACT_APP_CLIENT_URL}/checkout`,
     });
   
     res.send({url: session.url});
@@ -176,9 +198,6 @@ const checkoutProd = async (req, res) => {
 
 //   WEBHOOK
 let endpointSecret;
-
-// endpointSecret =
-// "whsec_9bb9c2c89c389abeefe1bcabc61303ebcaeb9c007042930404786b601f0e55f2";
 
 const stripeWebhook = (req, res) => {
 

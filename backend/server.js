@@ -7,7 +7,6 @@ const checkoutProduct = require('./routes/checkout')
 const checkingout = require('./routes/checkingout')
 const register = require('./routes/register')
 const login = require('./routes/login')
-// const build = require('./routes/build')
 
 connectDB();
 
@@ -22,8 +21,8 @@ app.use('/api/products', productRoutes)
 app.use('/api/checkout', checkoutProduct)
 app.use('/api/checkingout', checkingout)
 
-const port = process.env.port || 5000
+const PORT = process.env.REACT_APP_PORT || 5000
 
-app.listen(port, () => {
-    console.log(`listening on port ${port}!!`)
+app.listen(PORT, () => {
+    console.log(`listening on port ${PORT}!!`)
 })

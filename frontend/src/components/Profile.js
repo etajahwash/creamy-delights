@@ -1,8 +1,9 @@
 import "../styling/Profile.css";
 import profilebg from "../imgs/profilebg5.jpg";
-import miniprofile from "../imgs/miniprofile.jpg";
+import wavieP from "../imgs/wavie.png";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
 import { logoutUser } from "../features/authSlice";
 import { toast } from "react-toastify";
 import { useGetAllProductsQuery } from "../features/productsApi";
@@ -10,12 +11,12 @@ import { useGetAllProductsQuery } from "../features/productsApi";
 export default function Profile() {
   const dispatch = useDispatch();
   const loggedIn = useSelector((state) => state.auth);
-
+  const [profileShow, setProfileShow] = useState(false);
   const { data, isLoading, error } = useGetAllProductsQuery();
 
-  function handleAlert() {
-    alert("confirm profile change");
-  }
+  // console.log(data[0].sort((a,b) => b - a))
+  // console.log(data)
+
   return (
     <div
       className="profileSection"
@@ -33,13 +34,14 @@ export default function Profile() {
             <div
               className="profilePic"
               style={{
-                backgroundImage: `url(${miniprofile})`,
+                backgroundImage: `url(${wavieP})`,
                 backgroundSize: "100% 100%",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center center",
+                objectFit: "contain"
               }}
-              onClick={handleAlert}
-            ></div>
+            >
+            </div>
             <Link to="/">
               <h5
                 className="logOutText"

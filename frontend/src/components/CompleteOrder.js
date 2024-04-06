@@ -2,19 +2,23 @@ import "../styling/completeOrder.css";
 import { useDispatch } from "react-redux";
 import { clearCart } from "../features/cartSlice";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function CompleteOrder() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  window.addEventListener("load", orderComplete);
-
+ 
   function orderComplete() {
     dispatch(clearCart())
     setTimeout(() => {
       navigate('/checkoutSuccess')
     }, "5000");
   }
+
+  useEffect(() => {
+    orderComplete();
+  },[])
 
   return (
     <div className="coContainer">

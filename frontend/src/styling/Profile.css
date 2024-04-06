@@ -1,7 +1,7 @@
 .profileSection {
   height: 100vh;
   width: 100%;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .profilePicContainer {
@@ -19,7 +19,7 @@
   padding-top: 2rem;
   font-size: 45px;
   font-family: "Leckerli One", cursive;
-  color: palevioletred;
+  color: rgb(121, 179, 213);
 }
 
 .profileWrapper {
@@ -31,18 +31,20 @@
   padding-top: 2rem;
   font-size: 45px;
   font-family: "Leckerli One", cursive;
-  color: palevioletred;
+  color: rgb(121, 179, 213);
 }
 
 .profilePic {
-  background-color: aqua;
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50px;
+  height: 5rem;
+  width: 4rem;
+  margin-left: 1rem;
+  animation: wavieP 3s infinite;
 }
 
-.profilePic:hover {
-  /* margin-left: 2rem; */
+@keyframes wavieP {
+  0% { rotate: -20deg; }
+  50% { rotate: 20deg; }
+  100% { rotate: -20deg; }
 }
 
 .logOutText {
@@ -108,7 +110,6 @@
 .orderProductContainer {
   overflow-y: auto;
   height: 24rem;
-  /* width: 30rem; */
 }
 .creationProductContainer::-webkit-scrollbar,
 .orderProductContainer::-webkit-scrollbar {
@@ -188,14 +189,8 @@
   border-radius: 20px;
 }
 
-.pOrdersDate {
-}
-
 .pOrdersName {
   width: 12rem;
-}
-
-.pOrdersQty {
 }
 
 .pOrdersPrice {
@@ -215,6 +210,44 @@
 .spaceBetweenContainer > div {
   display: flex;
 }
+
+.profileFile {
+  width: 4rem;
+  margin-top: 3.8rem;
+  border-radius: 20px;
+  margin-left: 1rem;
+  z-index: 100;
+  opacity: 0;
+  position: relative;
+}
+
+.profileOverlay {
+  background-color: #de4b5055;
+  z-index: 0;
+  position: fixed;
+  height: 3rem;
+  width: 6rem;
+  border-radius: 0 0 150px 150px;
+  margin-top: -2.6rem;
+}
+
+.cam {
+  width: 1.7rem;
+  /* position: relative; */
+  margin-left: 2.2rem;
+  margin-top: 0.8rem;
+  z-index: 1;
+}
+
+.noProfileShow {
+  display: none;
+}
+
+
+
+
+
+
 
 /* MEDIA QUERIES */
 
@@ -277,6 +310,10 @@
 @media screen and (max-width: 728px) {
   .profilePicContainer {
     margin-left: 26rem;
+  }
+
+  .profileSection {
+    padding-bottom: 3rem;
   }
 }
 

@@ -14,20 +14,15 @@
 
 .imgContainer {
     height: 100vh;
-    /* width: 100vw; */
-    /* margin-left: 13rem; */
     position: relative;
 }
 
 .middleContainer {
-    /* position: absolute; */
     margin-top: 5rem;
     margin-left: 14rem;
-    /* border: solid black; */
     height: 10rem;
     width: 20rem;
     text-align: center;
-    /* align-items: center; */
 }
 
 .priceSection {
@@ -141,40 +136,11 @@
     line-height: 2rem;
 }
 
-/* .nutrition {
-    margin-top: 5rem;
-    margin-bottom: -2rem;
-}
-
-.warning {
-    margin: 0 auto;
-    margin-top: 2rem;
-    border: solid 10px white;
-    width: 25rem;
-    height: 10rem;
-}
-
-.warningSmall {
-    background-color: rgba(0, 0, 0, 0.213);
-    width: 20rem;
-    height: 8rem;
-    margin: 0 auto;
-    border-radius: 20px;
-    margin-top: .4rem;
-}
-
-.warningP {
-    font-size: 10px;
-    justify-content: center;
-    color: white;
-    margin: 0 auto;
-} */
-
 .inBackContainer {
     position: fixed;
     display: flex;
-    margin-left: 1rem;
-    margin-top: 38.8rem;
+    top: 8.5rem;
+    margin-top: -4rem;
 }
 
 .inBack {
@@ -213,6 +179,17 @@
     margin-right: 0.5rem;
 }
 
+.errorLoad {
+    font-size: 45px;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.smallerError {
+    font-size: 20px;
+    padding: 0;
+    color: red;
+}
 
 
 
@@ -237,45 +214,66 @@
     .middleContainer {
         margin-left: 2.5rem;
     }
-
-    /* .inContainer {
-        display: block;
-    } */
 }
 
 @media screen and (max-width: 800px) {
-    .middleContainer {
-        margin-left: 2.5rem;
+    .inTitle {
+        margin-left: 17rem;
     }
 
-    /* .inContainer {
-        display: block;
-    } */
-}
+    .inContainer {
+        margin-top: -2rem;
+    }
 
-@media screen and (max-width: 768px) {
+    .inSectionOne {
+        display: none;
+    }
+
     .inSectionTwo {
         display: initial;
     }
-    .inSectionOne {
-        display: none;
+
+    .inHiddenBottom {
+        display: flex;
+    }
+
+    .secondPrice {
+        display: flex;
+    }
+
+    .imgContainer {
+        margin-bottom: -5rem;
+        margin-top: -6rem;
+        margin-left: 8rem;
+        width: 40rem;
+        height: 30rem;
+    }
+
+    .inBackContainer {
+        margin-left: -8rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .inContainer {
+        margin-top: 0rem;
     }
 
     .inTitle {
         margin: 0;
         padding-top: 2rem;
-        padding-left: 20rem;
+        padding-left: 14rem;
     }
 
     .imgContainer {
-        margin-top: -9rem;
+        margin-top: -4rem;
         margin-left: 4rem;
-        /* z-index: 2; */
     }
 
     .inBackContainer {
-        margin-top: 4rem;
-        margin-left: -3rem;
+        margin-top: -4rem;
+        margin-left: -4rem;
     }
 
     .smallDiv {
@@ -283,10 +281,6 @@
         padding: 0;
         margin-top: -15rem;
         margin-left: 2rem;
-    }
-
-    .inHiddenBottom {
-        display: flex;
     }
 
     .priceSection {
@@ -297,12 +291,12 @@
         z-index: 100;       
     }
 
-    .secondPrice {
-        display: flex;
-    }
-
     .addToCart {
         margin-top: -1rem;
+    }
+
+    .inHiddenBottom {
+        margin-top: 13rem;
     }
 }
 
@@ -323,12 +317,19 @@
         margin-left: -2.5rem;
     }
 
+    .imgContainer {
+        margin-bottom: -6.5rem;
+    }
+
     .customPara {
         margin: 0;
         padding: 0;
-        /* padding: 2rem 0rem; */
         padding-top: 2rem;
         color: blue;
+    }
+
+    .inContainer {
+        overflow-x: hidden;
     }
 }
 
@@ -338,18 +339,30 @@
     }
 }
 
-@media screen and (max-width: 668px) {
+@media screen and (max-width: 669px) {
     .inHiddenBottom {
         display: initial;
     }
 
+    .inTitle {
+        margin-left: -1.5rem;
+    }
+
     .imgContainer {
-        margin-top: -18rem;
+        margin-left: 10rem;
+        margin-top: -6rem;
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .inBackContainer {
+        margin-left: -10rem;
+        margin-top: -4rem ;
     }
 
     .priceSection {
         margin-left: 9.5rem;
-        margin-top: -26rem;
+        margin-top: -0.5rem;
     }
 
     .smallDiv {
@@ -359,6 +372,7 @@
 }
 
 @media screen and (max-width: 624px) {
+
     .priceSection {
         margin-left: 8rem;
     }
@@ -368,7 +382,15 @@
     }
 
     .inTitle {
-        margin-left: -5rem;
+        margin-left: -3rem;
+    }
+
+    .imgContainer {
+        margin-left: 8rem;
+    }
+
+    .inBackContainer {
+        margin-left: -8rem;
     }
 
     .inContainer {
@@ -433,11 +455,12 @@
     .imgContainer {
         width: 40rem;
         margin-left: -5rem;
+        /* margin-top: ; */
     }
 
 }
 
-@media screen and (min-width: 400px) and (max-width: 550px) and (max-height: 950px) and (min-height:700px) {
+@media screen and (min-width: 400px) and (max-width: 550px) and (max-height: 950px) and (min-height:791px) {
     .priceSection {
         margin-left: 2.2rem;
         margin-top: 0rem;
@@ -478,10 +501,11 @@
         margin-top: -4rem;
         margin-left: -0.5rem;
     }
+    
 
 }
 
-@media screen and (min-width: 400px) and (max-width: 550px) and (max-height: 790px) and (min-height:650px) {
+@media screen and (min-width: 355px) and (max-width: 450px) and (max-height: 738px) and (min-height:730px) {
     .priceSection {
         margin-left: 2.2rem;
         margin-top: 0rem;
@@ -499,7 +523,7 @@
         margin: 0;
         padding: 0;
         padding-top: 1rem;
-        margin-left: 0.5rem;
+        margin-left: 1.5rem;
         width: 23rem;
         text-align: center;
     }
@@ -508,7 +532,31 @@
         width: 25rem;
         height: 20rem;
         margin-left: 1.5rem;
-        margin-top: 0rem;
+        margin-top: -1.5rem;
+    }
+
+    .smallDiv {
+        margin-left: 3rem;
+        margin-top: -2rem;
+        height: 9rem;
+        padding-top: 1.5rem;
+        text-align: center;
+    }
+
+    .inTitle {
+        margin: 0;
+        padding: 0;
+        padding-top: 1rem;
+        margin-left: 1.5rem;
+        width: 23rem;
+        text-align: center;
+    }
+
+    .imgContainer {
+        width: 25rem;
+        height: 20rem;
+        margin-left: 1.5rem;
+        margin-top: -1.5rem;
     }
 
     .descPara {
@@ -531,8 +579,60 @@
 
 }
 
+@media screen and (min-width: 395px) and (max-width: 550px) and (max-height: 729px) and (min-height:650px) {
+    .priceSection {
+        margin-left: 2.2rem;
+        margin-top: 0rem;
+    }
 
-@media screen and (min-width: 388px) and (max-width: 399px) and (max-height: 950px) and (min-height:700px) {
+    .smallDiv {
+        margin-left: 3rem;
+        margin-top: -2rem;
+        height: 9rem;
+        padding-top: 1.5rem;
+        text-align: center;
+    }
+
+    .inTitle {
+        margin: 0;
+        padding: 0;
+        padding-top: 1rem;
+        margin-left: 1rem;
+        width: 23rem;
+        text-align: center;
+    }
+
+    .imgContainer {
+        width: 25rem;
+        height: 20rem;
+        margin-left: 1.5rem;
+        margin-top: -3rem;
+        margin-bottom: -3.5rem;
+    }
+
+    .descPara {
+        margin: 0;
+        padding: 0;
+    }
+
+    .customPara {
+        margin: 0;
+        padding: 0;
+        margin-top: -1rem;
+        font-size: 15px;
+    }
+
+    .inBackContainer {
+        margin: 0;
+        padding: 0;
+        margin-top: -4rem;
+        margin-left: -0.5rem;
+    }
+
+}
+
+
+@media screen and (max-width: 399px) and (min-width: 388px) and (max-height: 950px) and (min-height:350px) {
     .priceSection {
         margin-left: 1.6rem;
         margin-top: 0rem;
@@ -548,7 +648,7 @@
     .inTitle {
         margin: 0;
         padding: 0;
-        padding-top: 1rem;
+        padding-top: 2.5rem;
         margin-left: 0.5rem;
         width: 23rem;
         text-align: center;
@@ -557,8 +657,9 @@
     .imgContainer {
         width: 25rem;
         height: 20rem;
-        margin-left: 1.5rem;
-        margin-top: 0rem;
+        margin-left: 0rem;
+        margin-top: -5rem;
+        margin-bottom: -4rem;
     }
 
     .customPara, .descPara {
@@ -567,11 +668,16 @@
         margin-top: 1rem;
     }
 
+    .customPara {
+        margin-top: 0rem;
+        font-size: 15px;
+    }
+
     .inBackContainer {
         margin: 0;
         padding: 0;
         margin-top: -4rem;
-        margin-left: -0.5rem;
+        margin-left: 0rem;
     }
 
 }
@@ -617,6 +723,10 @@
 }
 
 @media screen and (max-width: 376px) and (max-height: 670px) and (min-height:400px) {
+    .inContainer {
+        padding-bottom: 5rem;
+    }
+   
     .priceSection {
         margin-left: 1rem;
         margin-top: 0rem;
@@ -654,7 +764,7 @@
     .inBackContainer {
         margin: 0;
         padding: 0;
-        margin-top: -1rem;
+        margin-top: -4rem;
     }
 
 }
@@ -726,10 +836,7 @@
     .customPara {
         margin: 0;
         padding: 0;
-        font-size: 17px;
-        /* margin-top: -5rem; */
-        /* margin-bottom: -4rem; */
-
+        font-size: 16px;
     }
 
 }
@@ -745,26 +852,31 @@
     }
 
     .inTitle {
-        margin-left: -14rem;
+        margin-left: -1.5rem;
     }
 
     .imgContainer {
-        width: 38rem;
-        margin-left: -7rem;
+        width: 32rem;
+        margin-left: -5rem;
+        margin-top: -3.5rem;
     }
 
     .customPara {
         margin: 0;
         padding: 0;
-        font-size: 17px;
-        /* margin-top: -5rem; */
-        /* margin-bottom: -4rem; */
+        font-size: 12.5px;
+    }
 
+    .inBackContainer {
+        margin: 0;
+        padding: 0;
+        margin-top: -4rem;
+        margin-left: 5.5rem;
     }
 
 }
 
-@media screen and (max-width: 299px) and (max-height: 950px) and (min-height:600px) {
+@media screen and (max-width: 299px) {
     .priceSection {
         margin-left: -2rem;
         margin-top: 0rem;
@@ -801,9 +913,7 @@
     }
 
     .inBackContainer {
-        margin: 0;
-        padding: 0;
-        margin-top: 0rem;
+        margin-top: -4rem;
         margin-left: 3rem;
     }
 

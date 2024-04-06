@@ -6,15 +6,18 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useGetProductByIdQuery } from "../features/productIdApi";
+import { useGetAllProductsQuery } from "../features/productsApi";
 import { useParams } from "react-router-dom";
-import { url } from "../features/api";
 import axios from "axios";
+const backendUpdAPI = process.env.REACT_APP_API_URL;
+
 
 export default function Update() {
   const { id } = useParams();
   const navigate = useNavigate();
   const update = useSelector((state) => state.update);
-
+  // let cart = useSelector((state) => state.cart);
+  const allItems = useGetAllProductsQuery();
   const { data, isLoading, error } = useGetProductByIdQuery(id);
 
   const [updateFlavor, setUpdateFlavor] = useState({
@@ -24,22 +27,43 @@ export default function Update() {
     description: "",
   });
 
-  function handleProductSubmit(e) {
-    e.preventDefault();
-    if (updateFlavor.toppings !== "") {
-      navigate(`/menu/${id}`);
-      window.location.reload();
-    }
-  }
+  // const currentName = data?.name;
 
-  function submitUpdate(id) {
-    axios.put(`${url}/products/update/${id}`, {
+  const allFlavors = [];
+  allItems.data?.map((item) => {
+    if(item.name !== data?.name){
+    allFlavors.push(item.name)
+    }
+  })
+
+
+  function submitUpdate(e) {
+    e.preventDefault();
+
+    if(updateFlavor.name.length > 15) {
+      alert('name cannot exceed 15 characters!')
+    } else if(allFlavors.includes(updateFlavor.name)){
+      alert("sorry this name is taken!")
+    } else if(updateFlavor.toppings == "") {
+      alert('you must choose a topping!')
+    } else {
+      try {
+      axios.put(`${backendUpdAPI}/products/update/${id}`, {
       id: id,
       name: updateFlavor.name,
       flavor: updateFlavor.flavor,
       toppings: updateFlavor.toppings,
       description: updateFlavor.description,
-    });
+      })
+      } catch (error) {
+        alert(error)
+      }
+
+    setTimeout(() => {
+        navigate(`/menu/${id}`);
+        window.location.reload();
+     }, '1000')
+    }
   }
 
   return (
@@ -60,7 +84,7 @@ export default function Update() {
           {" "}
           <div className="theHidden">
             {updateFlavor.name === ""
-              ? (updateFlavor.name = `${data.name}`)
+              ? (updateFlavor.name = `${data?.name}`)
               : null}
           </div>
           <div className="updateWrapper">
@@ -92,7 +116,7 @@ export default function Update() {
                   action="/menu:id"
                   method="PUT"
                   className="updateForm"
-                  onSubmit={handleProductSubmit}
+                  onSubmit={submitUpdate}
                 >
                   <div className="updateCreationSection">
                     <div className="updateFlavor col-6">
@@ -110,7 +134,7 @@ export default function Update() {
                               name: e.target.value,
                             })
                           }
-                          placeholder={data.name}
+                          placeholder={data?.name}
                           className="updateNameInput"
                         />
                       </div>
@@ -416,7 +440,6 @@ export default function Update() {
                   </div>
                   <p>{update.updatePError}</p>
                   <button
-                    onClick={() => submitUpdate(data._id)}
                     className="updateSubmitButton"
                   >
                     Submit

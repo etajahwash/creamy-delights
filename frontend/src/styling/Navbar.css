@@ -1,7 +1,6 @@
 .navbarSection {
     height: 3rem;
     width: 100vw;
-    /* background-color: #c8eef9; */
     color: black;
     display: flex;
 }
@@ -28,6 +27,7 @@ a {
     font-weight: 600;
 }
 
+
 a:link { 
     text-decoration: none;
     color: black;
@@ -38,12 +38,12 @@ a:visited {
     color: black;
 }
 
-a:hover {
-    color: hotpink !important;
+a:active {
     text-decoration: none;
 }
 
-a:active {
+a:hover {
+    color: hotpink !important;
     text-decoration: none;
 }
 
@@ -96,6 +96,11 @@ a:active {
     font-size: 35px;
     font-weight: 700;
     margin-top: 0.5rem;
+    color: rgb(252, 248, 233);
+}
+
+.title:hover {
+    color: hotpink;
 }
 
 .leftSection {
@@ -105,7 +110,6 @@ a:active {
 }
 
 .order {
-    /* margin-right: 2rem; */
     animation: about 3s infinite;
 }
 

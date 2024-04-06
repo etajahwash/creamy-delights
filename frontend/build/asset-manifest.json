@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.49da421e.css",
+    "main.js": "/static/js/main.391b68a1.js",
+    "static/media/dots.png": "/static/media/dots.7ec72770f98105282de0.png",
+    "static/media/copy.jpg": "/static/media/copy.fae029e74e9fcf579f74.jpg",
+    "static/media/profilebg5.jpg": "/static/media/profilebg5.b424bff7bd22c9b9b73f.jpg",
+    "static/media/loginbg.jpg": "/static/media/loginbg.09d3938379f87ccf9763.jpg",
+    "static/media/profilebg2.jpg": "/static/media/profilebg2.3cd8992b71ee1b30bba4.jpg",
+    "static/media/aboutbg3.jpg": "/static/media/aboutbg3.b422399cb9f6735dff70.jpg",
+    "static/media/icecreambg3.jpg": "/static/media/icecreambg3.a119bac767de73e97a1c.jpg",
+    "static/media/iconpng.png": "/static/media/iconpng.fdc0ad2a6caea40ab7f7.png",
+    "static/media/wavie.png": "/static/media/wavie.9b1b542fd525087c38b4.png",
+    "static/media/mystery.png": "/static/media/mystery.267cbbe97b4cdadf7e21.png",
+    "static/media/cobg3.jpg": "/static/media/cobg3.fd60f371218703c0c830.jpg",
+    "static/media/fun.jpg": "/static/media/fun.8f90f586dc2f7ec8c264.jpg",
+    "static/media/underline.png": "/static/media/underline.020923543061f6f00d71.png",
+    "static/media/cam.png": "/static/media/cam.459900bb2921d2c15fa1.png",
+    "index.html": "/index.html",
+    "main.49da421e.css.map": "/static/css/main.49da421e.css.map",
+    "main.391b68a1.js.map": "/static/js/main.391b68a1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49da421e.css",
+    "static/js/main.391b68a1.js"
+  ]
+}

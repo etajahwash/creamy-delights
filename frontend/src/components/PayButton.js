@@ -1,8 +1,9 @@
 import '../styling/PayButton.css'
 import axios from "axios";
 import { useSelector } from "react-redux";
-import { url } from "../features/api";
 import { useState } from "react";
+const backendPayAPI = process.env.REACT_APP_API_URL;
+
 
 const PayButton = ({ cartItems }) => {
   const user = useSelector((state) => state.auth);
@@ -11,7 +12,7 @@ const PayButton = ({ cartItems }) => {
   const handleCheckout = () => {
     setPayText(true)
     axios
-      .post(`${url}/checkout/create-checkout-session`, {
+      .post(`${backendPayAPI}/checkout/create-checkout-session`, {
         cartItems,
         userId: user._id,
       })

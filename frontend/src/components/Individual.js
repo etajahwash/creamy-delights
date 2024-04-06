@@ -12,19 +12,19 @@ import {
   numIncrease,
   numDecrease,
   getTotals,
+  removeFromCart,
 } from "../features/cartSlice";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { url } from "../features/api";
 import { toast } from "react-toastify";
+const backendIndAPI = process.env.REACT_APP_API_URL;
 
 export default function Individual() {
   let cart = useSelector((state) => state.cart);
   const { id } = useParams();
   const auth = useSelector((state) => state.auth);
   const navigate = useNavigate();
-
   const { data, error, isLoading } = useGetProductByIdQuery(id);
   const dispatch = useDispatch();
 
@@ -36,6 +36,10 @@ export default function Individual() {
     dispatch(addToCart(data));
   };
 
+  const removingFromCart = (data) => {
+    dispatch(removeFromCart(data));
+  };
+
   const numsIncrease = function handleNumIncrease(data) {
     dispatch(numIncrease(data));
   };
@@ -45,11 +49,14 @@ export default function Individual() {
   };
 
   const deleteProduct = (id) => {
+    cart.cartItems?.map((item) => (item._id === id) ? removingFromCart(item) : null);
     axios
-      .delete(`${url}/products/delete/${id}`)
+      .delete(`${backendIndAPI}/products/delete/${id}`)
       .then((res) => null)
       .catch((error) => console.log(error));
     navigate("/menu");
+    navigate(0)
+    // setTimeout(navigate(0), 1000);
     toast(`You have deleted ${data.name}`, {
       position: "bottom-left",
       theme: "light",
@@ -68,14 +75,16 @@ export default function Individual() {
         backgroundImage: `url(${dots})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
-        // objectFit: 'cover',
         backgroundColor: "lavender",
       }}
     >
       {isLoading ? (
         <p className="loading">...Loading</p>
       ) : error ? (
-        <p>An error occurred</p>
+        <>
+        <p className="errorLoad">An error occurred</p>
+        <p className="errorLoad smallerError">please refresh the page</p>
+        </>
       ) : (
         <>
           <div className="inSectionOne">
@@ -83,7 +92,7 @@ export default function Individual() {
               <div
                 className="imgContainer"
                 style={{
-                  backgroundImage: `url(${data.imgUrl})`,
+                  backgroundImage: `url(${data?.imgUrl})`,
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center center",
                   backgroundSize: "70% 80%",
@@ -97,19 +106,19 @@ export default function Individual() {
               </div>
             </div>
             <div className="inTextContainer col-lg-6 col-md-6 col-sm-12">
-              <h1 className="inTitle">{data.name}</h1>
+              <h1 className="inTitle">{data?.name}</h1>
               <div className="bigDiv">
                 <div className="smallDiv">
                   <p
-                    className={data.matchId === "0" ? "descPara" : "customPara"}
+                    className={data?.matchId === "0" ? "descPara" : "customPara"}
                   >
-                    {data.description}
+                    {data?.description}
                   </p>
                 </div>
               </div>
               <div className="middleContainer">
                 <div className="priceSection">
-                  <p className="price">${data.price}</p>
+                  <p className="price">${data?.price}</p>
                   <div className="addSection">
                     <RemoveCircleIcon
                       className="remove"
@@ -131,14 +140,14 @@ export default function Individual() {
                   Add to Cart
                 </button>{" "}
                 <br />
-                {auth._id && data.matchId === auth._id ? (
+                {auth._id && data?.matchId === auth._id ? (
                   <div className="inBottomButtonsContainer">
                     <button className="inUpdateButton" onClick={updateScreen}>
                       Update
                     </button>
                     <button
                       className="inDeleteButton"
-                      onClick={() => deleteProduct(data._id)}
+                      onClick={() => deleteProduct(data?._id)}
                     >
                       Delete
                     </button>
@@ -148,12 +157,12 @@ export default function Individual() {
             </div>
           </div>
           <div className="inSectionTwo">
-            <div className="imgContainerSection col-lg-6 col-md-6 col-sm-12">
-              <h1 className="inTitle">{data.name}</h1>
+            <div className="imgContainerSection col-lg-6 col-md-12 col-sm-12">
+              <h1 className="inTitle">{data?.name}</h1>
               <div
                 className="imgContainer"
                 style={{
-                  backgroundImage: `url(${data.imgUrl})`,
+                  backgroundImage: `url(${data?.imgUrl})`,
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center center",
                   backgroundSize: "60% 70%",
@@ -168,15 +177,15 @@ export default function Individual() {
               <div className="inHiddenBottom">
                 <div className="smallDiv">
                   <p
-                    className={data.matchId === "0" ? "descPara" : "customPara"}
+                    className={data?.matchId === "0" ? "descPara" : "customPara"}
                   >
-                    {data.description}
+                    {data?.description}
                   </p>
                 </div>
                 <div className="priceSection">
                   <div className="firstPrice">
                     <div className="secondPrice">
-                      <p className="price">${data.price}</p>
+                      <p className="price">${data?.price}</p>
                       <div className="addSection">
                         <RemoveCircleIcon
                           className="remove"
@@ -198,7 +207,7 @@ export default function Individual() {
                       Add to Cart
                     </button>{" "}
                     <br />
-                    {auth._id && data.matchId === auth._id ? (
+                    {auth._id && data?.matchId === auth._id ? (
                       <div className="inBottomButtonsContainer">
                         <button
                           className="inUpdateButton"
@@ -208,7 +217,7 @@ export default function Individual() {
                         </button>
                         <button
                           className="inDeleteButton"
-                          onClick={() => deleteProduct(data._id)}
+                          onClick={() => deleteProduct(data?._id)}
                         >
                           Delete
                         </button>

@@ -8,3 +8,9 @@
     font-family: 'Playfair Display', sans-serif;
     box-sizing: border-box;
 }
+
+@media screen and (max-width: 650px) {
+    .App {
+        overflow-x: hidden;
+    }
+}

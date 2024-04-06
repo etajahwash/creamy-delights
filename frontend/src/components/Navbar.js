@@ -4,6 +4,7 @@ import { useState } from "react";
 import icon from "../imgs/iconpng.png";
 import icecreambg from "../imgs/copy.jpg";
 import profile from "../imgs/profile.png";
+import profilePink from "../imgs/profilePink.png";
 import { Link, useNavigate } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -21,8 +22,9 @@ export default function Navbar() {
   const { cartTotalQuantity } = useSelector((state) => state.cart);
   const auth = useSelector((state) => state.auth);
   const [isActive, setIsActive] = useState(false);
+  const [isHover, setIsHover] = useState(false)
   const navigate = useNavigate();
-
+  
   function aboutList() {
     setIsActive(false);
     navigate("/about");
@@ -101,11 +103,11 @@ export default function Navbar() {
           </div>
           {auth._id ? (
             <Link to="/profile" className="order col-6">
-              <img src={profile} className="profile" alt="profile pic" />
+              <img src={isHover === false ? profile : profilePink} className="profile" alt="profile pic" onMouseOver={() => setIsHover(true)} onMouseOut={() => setIsHover(false)} />
             </Link>
           ) : (
             <Link to="/login" className="order col-6">
-              <img src={profile} className="profile" alt="profile pic" />
+              <img src={isHover === false ? profile : profilePink} className="profile" alt="profile pic" onMouseOver={() => setIsHover(true)} onMouseOut={() => setIsHover(false)} />
             </Link>
           )}
         </div>

@@ -1,7 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import jwtDecode from 'jwt-decode'
 import axios from 'axios'
-import { url } from './api';
+const backendAuthAPI = process.env.REACT_APP_API_URL;
+
 
 const initialState = {
     token: localStorage.getItem('token'),
@@ -20,7 +21,7 @@ export const registerUser = createAsyncThunk(
     'auth/registerUser',
     async (user, {rejectWithValue}) => {
        try {
-        const token = await axios.post(`${url}/register`, {
+        const token = await axios.post(`${backendAuthAPI}/register`, {
             name: user.name,
             email: user.email,
             password: user.password,
@@ -41,7 +42,7 @@ export const loginUser = createAsyncThunk(
     'auth/loginUser',
     async (user, {rejectWithValue}) => {
        try {
-        const token = await axios.post(`${url}/login`, {
+        const token = await axios.post(`${backendAuthAPI}/login`, {
             email: user.email,
             password: user.password,
         });

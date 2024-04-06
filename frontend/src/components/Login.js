@@ -14,7 +14,7 @@ export default function Login() {
       }}
     >
       <h1 className="loginTitle">
-        Don't be on the out. <br /> Be in the in.
+        Don't be on the <a className="loginOut">out</a>. <br /> Be in the in.
         <br />
         <br />
         <br />

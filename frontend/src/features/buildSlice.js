@@ -1,8 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import jwtDecode from 'jwt-decode'
 import axios from 'axios'
-import { url } from './api';
-import { toast } from 'react-toastify'
+const backendBuildAPI = process.env.REACT_APP_API_URL;
 
 const initialState = {
     token: localStorage.getItem('token'),
@@ -24,7 +23,7 @@ export const createAProduct = createAsyncThunk(
     'build/createAProduct',
     async (createP, {rejectWithValue}) => {
        try {
-        const token = await axios.post(`${url}/products/build`, {
+        const token = await axios.post(`${backendBuildAPI}/products/build`, {
             name: createP.name,
             price: createP.price,
             flavor: createP.flavor,

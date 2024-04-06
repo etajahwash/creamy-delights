@@ -1,16 +1,31 @@
 import "../styling/Menu.css";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import bg from "../imgs/dots.png";
 import { useGetAllProductsQuery } from "../features/productsApi";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+// import { useNavigate } from "react-router-dom";
+import { getTotals } from "../features/cartSlice";
+
+
 
 export default function Menu() {
   const auth = useSelector((state) => state.auth);
   const { data, error, isLoading } = useGetAllProductsQuery();
+  let cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+  // const navigate = useNavigate();
+
 
   function refresher() {
     window.reload();
   }
+
+  useEffect(() => {
+    dispatch(getTotals());
+  }, [cart, dispatch]);
+
   return (
     <div
       className="menuSection"

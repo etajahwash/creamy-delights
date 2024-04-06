@@ -5,12 +5,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { createAProduct } from "../features/buildSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { useGetAllProductsQuery } from "../features/productsApi";
 
 export default function Build() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const build = useSelector((state) => state.build);
   const auth = useSelector((state) => state.auth);
+  const { data } = useGetAllProductsQuery();
 
   const [newFlavor, setNewFlavor] = useState({
     name: "",
@@ -23,22 +25,34 @@ export default function Build() {
     matchId: `${auth._id ? auth._id : 0}`,
   });
 
+  const currentFlavors = [];
+  data?.map((item) => currentFlavors.push(item.name))
+
   function handleProductSubmit(e) {
     e.preventDefault();
-    try {
-      dispatch(createAProduct(newFlavor));
-      if (newFlavor.name !== "" && newFlavor.toppings !== "") {
-        navigate(`/profile`);
-        window.location.reload();
+
+    if(newFlavor.name == ""){
+      alert('you must make a name!')
+    } else if(newFlavor.name.length > 15) {
+      alert('name cannot exceed 15 characters!')
+    } else if(currentFlavors.includes(newFlavor.name)){
+      alert("sorry this name is taken!")
+    } else if(newFlavor.toppings == "") {
+      alert('you must choose a topping!')
+    } else {
+      try {
+          dispatch(createAProduct(newFlavor));
+          navigate(`/profile`)
+          navigate(0)
+      } catch (error) {
+        alert(error);
       }
-    } catch (error) {
-      console.log(error);
     }
   }
 
-  useEffect(() => {
-    console.log(newFlavor);
-  }, [newFlavor]);
+  // useEffect(() => {
+  //   console.log(newFlavor);
+  // }, [newFlavor]);
 
   return (
     <div
