@@ -38,7 +38,10 @@ export default function Menu() {
         {isLoading ? (
           <p className="loading">...Loading</p>
         ) : error ? (
+          <>
           <p>An error occurred</p>
+          console.log(error)
+          </>
         ) : (
           <>
             <h3 className="menuTitle">Specials</h3>
