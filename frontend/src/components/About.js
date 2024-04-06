@@ -5,7 +5,7 @@ import icecreambg from "../imgs/aboutbg3.jpg";
 export default function About() {
   return (
     <div
-      className="aboutSection"
+      className="aboutSection" 
       style={{
         backgroundImage: `url(${icecreambg})`,
         backgroundSize: "100% 100%",
@@ -21,7 +21,7 @@ export default function About() {
         <div className="aboutText">
           <p className="innerText">
             <span className="f">F</span>rom humble beginnings in a small town
-            just outside of Lake Michigan, to being sold everywhere
+            just outside of Lake Michigan, to being sold everywhere 
             nationwide,&nbsp;
             <span className="cd">Creamy Delights</span> has come a long way!
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
