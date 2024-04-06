@@ -3,6 +3,7 @@ import underline from "../imgs/underline.png";
 import icecreambg from "../imgs/aboutbg3.jpg";
 
 export default function About() {
+  // test
   return (
     <div
       className="aboutSection" 
