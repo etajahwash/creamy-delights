@@ -331,6 +331,11 @@
     .inContainer {
         overflow-x: hidden;
     }
+
+    .smallDiv > p {
+        font-size: 0.9rem;
+    }
+    
 }
 
 @media screen and (max-width: 680px) {

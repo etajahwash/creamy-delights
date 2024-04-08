@@ -31,7 +31,6 @@ export default function Individual() {
   useEffect(() => {
     dispatch(getTotals());
   }, [cart, dispatch]);
-console.log(process.env.REACT_APP_MONGO_URI)
 
   const handleAddToCart = (data) => {
     dispatch(addToCart(data));
@@ -54,8 +53,8 @@ console.log(process.env.REACT_APP_MONGO_URI)
     axios.delete(`${backendIndAPI}/products/delete/${id}`)
       .then((res) => console.log(`Deleted ${data.name}`))
       .catch((error) => console.log(error));
-    // navigate(`/menu`);
-    // navigate(0)
+    navigate(`/menu`);
+    navigate(0)
     setTimeout(() => {
     toast(`You have deleted ${data.name}`, {
       position: "bottom-left",
@@ -111,7 +110,7 @@ console.log(process.env.REACT_APP_MONGO_URI)
               <div className="bigDiv">
                 <div className="smallDiv">
                   <p
-                    className={data?.matchId === "0" ? "descPara" : "customPara"}
+                    className={data?.matchId === "0" ? "descPara" : data?.matchId !== "0" && data?.description.length > 180 ? "customPara shrinkingText" : "customPara"}
                   >
                     {data?.description}
                   </p>
