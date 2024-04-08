@@ -5,7 +5,6 @@ import bg from "../imgs/dots.png";
 import { useGetAllProductsQuery } from "../features/productsApi";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-// import { useNavigate } from "react-router-dom";
 import { getTotals } from "../features/cartSlice";
 
 
@@ -15,7 +14,6 @@ export default function Menu() {
   const { data, error, isLoading } = useGetAllProductsQuery();
   let cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
 
 
   function refresher() {
@@ -57,7 +55,6 @@ export default function Menu() {
                   <Link
                     to={`/menu/${product._id}`}
                     className="cardWrapper"
-                    onClick={refresher}
                   >
                     <div
                       className="card"

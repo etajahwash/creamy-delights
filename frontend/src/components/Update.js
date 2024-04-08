@@ -42,10 +42,9 @@ export default function Update() {
     })
 
   useEffect(() => {
-    // if(data?.matchId !== auth._id) {
-    //   navigate(`/`)
-    // }
-    console.log(updateFlavor)
+    if(data?.matchId !== auth._id) {
+      navigate(`/`)
+    }
   })
 
 
@@ -62,21 +61,18 @@ export default function Update() {
       try {
       axios.put(`${backendUpdAPI}/products/update/${id}`, {
       name: updateFlavor.name,
-      // price: updateFlavor.price,
       flavor: updateFlavor.flavor,
       toppings: updateFlavor.toppings,
       description: updateFlavor.description,
-      // imgUrl: updateFlavor.imgUrl,
-      // matchId: updateFlavor.matchId
       })
       } catch (error) {
         alert(error)
       }
 
-    // setTimeout(() => {
-    //     navigate(`/menu/${id}`);
-    //     window.location.reload();
-    //  }, '1000')
+    setTimeout(() => {
+        navigate(`/menu/${id}`);
+        window.location.reload();
+     }, '1000')
     }
   }
 

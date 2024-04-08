@@ -31,6 +31,7 @@ export default function Individual() {
   useEffect(() => {
     dispatch(getTotals());
   }, [cart, dispatch]);
+console.log(process.env.REACT_APP_MONGO_URI)
 
   const handleAddToCart = (data) => {
     dispatch(addToCart(data));
@@ -51,17 +52,17 @@ export default function Individual() {
   const deleteProduct = () => {
     cart.cartItems?.map((item) => (item._id === id) ? removingFromCart(item) : null);
     axios.delete(`${backendIndAPI}/products/delete/${id}`)
-      .then((res) => null)
+      .then((res) => console.log(`Deleted ${data.name}`))
       .catch((error) => console.log(error));
-    navigate(`/menu`);
-    navigate(0)
+    // navigate(`/menu`);
+    // navigate(0)
     setTimeout(() => {
     toast(`You have deleted ${data.name}`, {
       position: "bottom-left",
       theme: "light",
       autoClose: 3500,
     })
-  }, 2000)
+  }, 3000)
   };
 
   function updateScreen() {
