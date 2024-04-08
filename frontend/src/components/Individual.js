@@ -48,27 +48,25 @@ export default function Individual() {
     dispatch(numDecrease(data));
   };
 
-  const deleteProduct = (id) => {
-    // cart.cartItems?.map((item) => (item._id === id) ? removingFromCart(item) : null);
-    axios
-      .delete(`${backendIndAPI}/products/delete/${id}`)
+  const deleteProduct = () => {
+    cart.cartItems?.map((item) => (item._id === id) ? removingFromCart(item) : null);
+    axios.delete(`${backendIndAPI}/products/delete/${id}`)
       .then((res) => null)
       .catch((error) => console.log(error));
     navigate(`/menu`);
-    // navigate(0)
-    setTimeout(navigate(0), 3000);
+    navigate(0)
+    setTimeout(() => {
     toast(`You have deleted ${data.name}`, {
       position: "bottom-left",
       theme: "light",
       autoClose: 3500,
-    });
+    })
+  }, 2000)
   };
 
   function updateScreen() {
     navigate(`/menu/update/${id}`);
   }
-
-  console.log(id)
 
   return (
     <div

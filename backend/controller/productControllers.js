@@ -87,31 +87,9 @@ const buildProduct = async (req, res) => {
 
 // UPDATE PRODUCT
 const updateProduct = async (req, res) => {
-
-    const schema = Joi.object({
-        name: Joi.string().min(3).max(15).required(),
-        price: Joi.number().required(),
-        flavor: Joi.string().required(),
-        description: Joi.string(),
-        toppings: Joi.string().lowercase().required().valid('sprinkles', 'double scoop', 'maraschino cherries', 'cake', 'caramel sauce',
-        'whipped cream', 'strawberry sauce', 'crushed oreos', 'banana slices',
-        'chili oil', 'hot fudge', 'raspberries', "s'mores", 'blueberries', 'pretzels', 'almonds'),
-        imgUrl: Joi.string().required(),
-        matchId: Joi.string().required(),
-    })
-
-    // part of joi syntax to validate value against the defined schema
-    // this checks for errors
-    const { error } = schema.validate(req.body)
-    if (error) return res.status(400).send(`${error.details[0].message}`)
-
-    // checks if unique property (name, in this case) already exists. if so, error will appear
-    let updatedItem = await Product.findOne({name: req.body.name})
-    if (updatedItem) return res.status(400).send('Ice cream name already exists.')
-
     const { id } = req.params;
  
-    updatedItem = {
+    const updatedItem = {
         name: req.body.name,
         flavor: req.body.flavor,
         toppings: req.body.toppings,

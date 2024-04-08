@@ -17,9 +17,7 @@ export default function LoggingIn() {
     if (auth._id) {
       navigate("/");
     }
-
-    console.log(auth._id);
-  }, [auth._id, navigate]);
+  }, [auth._id]);
 
   const [user, setUser] = useState({
     email: "",

@@ -3,7 +3,7 @@ import dots from "../imgs/dots.png";
 import mystery from "../imgs/mystery.png";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useGetProductByIdQuery } from "../features/productIdApi";
 import { useGetAllProductsQuery } from "../features/productsApi";
@@ -16,10 +16,10 @@ export default function Update() {
   const { id } = useParams();
   const navigate = useNavigate();
   const update = useSelector((state) => state.update);
-  // let cart = useSelector((state) => state.cart);
+  const auth = useSelector((state) => state.auth);
   const allItems = useGetAllProductsQuery();
   const { data, isLoading, error } = useGetProductByIdQuery(id);
-
+  const [checking, setChecking] = useState([])
   const [updateFlavor, setUpdateFlavor] = useState({
     name: "",
     flavor: "Vanilla",
@@ -27,13 +27,25 @@ export default function Update() {
     description: "",
   });
 
-  // const currentName = data?.name;
+  const theToppings = ['sprinkles', 'double scoop', 'maraschino cherries', 'cake', 'caramel sauce',
+    'whipped cream', 'strawberry sauce', 'crushed oreos', 'banana slices',
+    'chili oil', 'hot fudge', 'raspberries', "s'mores", 'blueberries', 'pretzels', 'almonds'
+  ];
+
+  const theFlavors = ['Vanilla', 'Chocolate', 'Strawberry', 'Combination']
 
   const allFlavors = [];
-  allItems.data?.map((item) => {
-    if(item.name !== data?.name){
-    allFlavors.push(item.name)
-    }
+    allItems.data?.map((item) => {
+      if(item.name !== data?.name){
+      return allFlavors.push(item.name)
+      }
+    })
+
+  useEffect(() => {
+    // if(data?.matchId !== auth._id) {
+    //   navigate(`/`)
+    // }
+    console.log(updateFlavor)
   })
 
 
@@ -44,29 +56,32 @@ export default function Update() {
       alert('name cannot exceed 15 characters!')
     } else if(allFlavors.includes(updateFlavor.name)){
       alert("sorry this name is taken!")
-    } else if(updateFlavor.toppings == "") {
+    } else if(updateFlavor.toppings === "") {
       alert('you must choose a topping!')
     } else {
       try {
       axios.put(`${backendUpdAPI}/products/update/${id}`, {
-      id: id,
       name: updateFlavor.name,
+      // price: updateFlavor.price,
       flavor: updateFlavor.flavor,
       toppings: updateFlavor.toppings,
       description: updateFlavor.description,
+      // imgUrl: updateFlavor.imgUrl,
+      // matchId: updateFlavor.matchId
       })
       } catch (error) {
         alert(error)
       }
 
-    setTimeout(() => {
-        navigate(`/menu/${id}`);
-        window.location.reload();
-     }, '1000')
+    // setTimeout(() => {
+    //     navigate(`/menu/${id}`);
+    //     window.location.reload();
+    //  }, '1000')
     }
   }
 
   return (
+    <>
     <div
       className="updateSection"
       style={{
@@ -152,290 +167,39 @@ export default function Update() {
                             })
                           }
                         >
-                          <option className="baseFlavorOptions" value="Vanilla">
-                            Vanilla
-                          </option>
-                          <option
-                            className="baseFlavorOptions"
-                            value="Chocolate"
-                          >
-                            Chocolate
-                          </option>
-                          <option
-                            className="baseFlavorOptions"
-                            value="Strawberry"
-                          >
-                            Strawberry
-                          </option>
-                          <option
-                            className="baseFlavorOptions"
-                            value="Combination"
-                          >
-                            Combination
-                          </option>
+                          {theFlavors.map((flav) => (
+                      <option className="baseFlavorOptions" value={flav} key={flav}>
+                        {flav}
+                      </option>
+                      ))}
                         </select>
                       </div>
                     </div>
                     <div className="updateToppings col-6">
                       <h5 className="toppingsTitle">Choose your toppings:</h5>
                       <div className="toppingsContainer">
-                        <label className="container">
-                          <input
-                            type="checkbox"
-                            className="checkboxes"
-                            onChange={(e) =>
-                              setUpdateFlavor({
-                                ...updateFlavor,
-                                toppings: e.target.value,
-                                description: `Enjoy this mystery, creamy customer classic! With a delicious ${updateFlavor.flavor} base, this custom includes: ${e.target.value} and... well, we don't wanna ruin the mystery! Try it today!`,
-                              })
-                            }
-                            name="checkboxButtons"
-                            value="sprinkles"
-                          />
-                          sprinkles
-                        </label>
-                        <label className="container">
-                          <input
-                            type="checkbox"
-                            className="checkboxes"
-                            onChange={(e) =>
-                              setUpdateFlavor({
-                                ...updateFlavor,
-                                toppings: e.target.value,
-                                description: `Enjoy this mystery, creamy customer classic! With a delicious ${updateFlavor.flavor} base, this custom includes: ${e.target.value} and... well, we don't wanna ruin the mystery! Try it today!`,
-                              })
-                            }
-                            name="checkboxButtons"
-                            value="caramel sauce"
-                          />
-                          caramel sauce
-                        </label>
-                        <label className="container">
-                          <input
-                            type="checkbox"
-                            className="checkboxes"
-                            onChange={(e) =>
-                              setUpdateFlavor({
-                                ...updateFlavor,
-                                toppings: e.target.value,
-                                description: `Enjoy this mystery, creamy customer classic! With a delicious ${updateFlavor.flavor} base, this custom includes: ${e.target.value} and... well, we don't wanna ruin the mystery! Try it today!`,
-                              })
-                            }
-                            name="checkboxButtons"
-                            value="double scoop"
-                          />
-                          double scoop
-                        </label>
-                        <label className="container">
-                          <input
-                            type="checkbox"
-                            className="checkboxes"
-                            onChange={(e) =>
-                              setUpdateFlavor({
-                                ...updateFlavor,
-                                toppings: e.target.value,
-                                description: `Enjoy this mystery, creamy customer classic! With a delicious ${setUpdateFlavor.flavor} base, this custom includes: ${e.target.value} and... well, we don't wanna ruin the mystery! Try it today!`,
-                              })
-                            }
-                            name="checkboxButtons"
-                            value="maraschino cherries"
-                          />
-                          maraschino cherries
-                        </label>
-                        <label className="container">
-                          <input
-                            type="checkbox"
-                            className="checkboxes"
-                            onChange={(e) =>
-                              setUpdateFlavor({
-                                ...updateFlavor,
-                                toppings: e.target.value,
-                                description: `Enjoy this mystery, creamy customer classic! With a delicious ${updateFlavor.flavor} base, this custom includes: ${e.target.value} and... well, we don't wanna ruin the mystery! Try it today!`,
-                              })
-                            }
-                            name="checkboxButtons"
-                            value="cake"
-                          />
-                          cake
-                        </label>
-                        <label className="container">
-                          <input
-                            type="checkbox"
-                            className="checkboxes"
-                            onChange={(e) =>
-                              setUpdateFlavor({
-                                ...updateFlavor,
-                                toppings: e.target.value,
-                                description: `Enjoy this mystery, creamy customer classic! With a delicious ${updateFlavor.flavor} base, this custom includes: ${e.target.value} and... well, we don't wanna ruin the mystery! Try it today!`,
-                              })
-                            }
-                            name="checkboxButtons"
-                            value="whipped cream"
-                          />
-                          whipped cream
-                        </label>
-                        <label className="container">
-                          <input
-                            type="checkbox"
-                            className="checkboxes"
-                            onChange={(e) =>
-                              setUpdateFlavor({
-                                ...updateFlavor,
-                                toppings: e.target.value,
-                                description: `Enjoy this mystery, creamy customer classic! With a delicious ${updateFlavor.flavor} base, this custom includes: ${e.target.value} and... well, we don't wanna ruin the mystery! Try it today!`,
-                              })
-                            }
-                            name="checkboxButtons"
-                            value="strawberry sauce"
-                          />
-                          strawberry sauce
-                        </label>
-                        <label className="container">
-                          <input
-                            type="checkbox"
-                            className="checkboxes"
-                            onChange={(e) =>
-                              setUpdateFlavor({
-                                ...updateFlavor,
-                                toppings: e.target.value,
-                                description: `Enjoy this mystery, creamy customer classic! With a delicious ${updateFlavor.flavor} base, this custom includes: ${e.target.value} and... well, we don't wanna ruin the mystery! Try it today!`,
-                              })
-                            }
-                            name="checkboxButtons"
-                            value="crushed oreos"
-                          />
-                          crushed oreos
-                        </label>
-                        <label className="container">
-                          <input
-                            type="checkbox"
-                            className="checkboxes"
-                            onChange={(e) =>
-                              setUpdateFlavor({
-                                ...updateFlavor,
-                                toppings: e.target.value,
-                                description: `Enjoy this mystery, creamy customer classic! With a delicious ${updateFlavor.flavor} base, this custom includes: ${e.target.value} and... well, we don't wanna ruin the mystery! Try it today!`,
-                              })
-                            }
-                            name="checkboxButtons"
-                            value="banana slices"
-                          />
-                          banana slices
-                        </label>
-                        <label className="container">
-                          <input
-                            type="checkbox"
-                            className="checkboxes"
-                            onChange={(e) =>
-                              setUpdateFlavor({
-                                ...updateFlavor,
-                                toppings: e.target.value,
-                                description: `Enjoy this mystery, creamy customer classic! With a delicious ${updateFlavor.flavor} base, this custom includes: ${e.target.value} and... well, we don't wanna ruin the mystery! Try it today!`,
-                              })
-                            }
-                            name="checkboxButtons"
-                            value="chili oil"
-                          />
-                          chili oil
-                        </label>
-                        <label className="container">
-                          <input
-                            type="checkbox"
-                            className="checkboxes"
-                            onChange={(e) =>
-                              setUpdateFlavor({
-                                ...updateFlavor,
-                                toppings: e.target.value,
-                                description: `Enjoy this mystery, creamy customer classic! With a delicious ${updateFlavor.flavor} base, this custom includes: ${e.target.value} and... well, we don't wanna ruin the mystery! Try it today!`,
-                              })
-                            }
-                            name="checkboxButtons"
-                            value="hot fudge"
-                          />
-                          hot fudge
-                        </label>
-                        <label className="container">
-                          <input
-                            type="checkbox"
-                            className="checkboxes"
-                            onChange={(e) =>
-                              setUpdateFlavor({
-                                ...updateFlavor,
-                                toppings: e.target.value,
-                                description: `Enjoy this mystery, creamy customer classic! With a delicious ${updateFlavor.flavor} base, this custom includes: ${e.target.value} and... well, we don't wanna ruin the mystery! Try it today!`,
-                              })
-                            }
-                            name="checkboxButtons"
-                            value="raspberries"
-                          />
-                          raspberries
-                        </label>
-                        <label className="container">
-                          <input
-                            type="checkbox"
-                            className="checkboxes"
-                            onChange={(e) =>
-                              setUpdateFlavor({
-                                ...updateFlavor,
-                                toppings: e.target.value,
-                                description: `Enjoy this mystery, creamy customer classic! With a delicious ${updateFlavor.flavor} base, this custom includes: ${e.target.value} and... well, we don't wanna ruin the mystery! Try it today!`,
-                              })
-                            }
-                            name="checkboxButtons"
-                            value="s'mores"
-                          />
-                          s'mores
-                        </label>
-                        <label className="container">
-                          <input
-                            type="checkbox"
-                            className="checkboxes"
-                            onChange={(e) =>
-                              setUpdateFlavor({
-                                ...updateFlavor,
-                                toppings: e.target.value,
-                                description: `Enjoy this mystery, creamy customer classic! With a delicious ${updateFlavor.flavor} base, this custom includes: ${e.target.value} and... well, we don't wanna ruin the mystery! Try it today!`,
-                              })
-                            }
-                            name="checkboxButtons"
-                            value="blueberries"
-                          />
-                          blueberries
-                        </label>
-                        <label className="container">
-                          <input
-                            type="checkbox"
-                            className="checkboxes"
-                            onChange={(e) =>
-                              setUpdateFlavor({
-                                ...updateFlavor,
-                                toppings: e.target.value,
-                                description: `Enjoy this mystery, creamy customer classic! With a delicious ${updateFlavor.flavor} base, this custom includes: ${e.target.value} and... well, we don't wanna ruin the mystery! Try it today!`,
-                              })
-                            }
-                            name="checkboxButtons"
-                            value="pretzels"
-                          />
-                          pretzels
-                        </label>
-                        <label className="container">
-                          <input
-                            type="checkbox"
-                            className="checkboxes"
-                            onChange={(e) =>
-                              setUpdateFlavor({
-                                ...updateFlavor,
-                                toppings: e.target.value,
-                                description: `Enjoy this mystery, creamy customer classic! With a delicious ${updateFlavor.flavor} base, this custom includes: ${e.target.value} and... well, we don't wanna ruin the mystery! Try it today!`,
-                              })
-                            }
-                            name="checkboxButtons"
-                            value="almonds"
-                          />
-                          almonds
-                        </label>
-                      </div>
+                      {theToppings.map((top) => (
+                    <label className="container" key={top}>
+                      <input
+                        type="checkbox"
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setChecking([...checking, e.target.value])
+                          } else if (!e.target.checked) {
+                            setChecking(checking.filter((unchecked) => unchecked !== e.target.value))
+                          }
+                          setUpdateFlavor({
+                            ...updateFlavor,
+                            toppings: e.target.value,
+                            description: `Enjoy this mystery, creamy customer classic! With a delicious ${updateFlavor.flavor} base, this custom includes${checking.length >= 2 ? ` ${checking[0]}, ${checking[1]}, and...` : checking.length === 1 ? ` ${checking[0]} and...` : "..."} well, we don't wanna ruin all the mystery! Try it today!`,
+                          })
+                        }}
+                        name="checkboxButtons"
+                        value={top}
+                      />
+                      {top}
+                    </label>
+                  ))}                      </div>
                     </div>
                   </div>
                   <p>{update.updatePError}</p>
@@ -451,5 +215,6 @@ export default function Update() {
         </>
       )}
     </div>
+    </>
   );
 }

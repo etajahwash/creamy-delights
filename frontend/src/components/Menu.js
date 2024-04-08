@@ -40,7 +40,7 @@ export default function Menu() {
         ) : error ? (
           <>
           <p>An error occurred</p>
-          console.log(error)
+          {console.log(error)}
           </>
         ) : (
           <>
